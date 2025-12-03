@@ -1,0 +1,20 @@
+.btn-glass {
+    display: inline-block;
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+    color: white;
+}
+
+.btn-sm { font-size: 0.9rem; padding: 10px 28px; }
+.btn-lg { font-size: 1rem; padding: 14px 40px; }
