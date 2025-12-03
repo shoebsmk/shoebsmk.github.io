@@ -1,0 +1,26 @@
+.contact-form .form-row { margin-bottom: 1rem; }
+.contact-form label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255,255,255,0.15);
+  color: var(--text-color);
+}
+.contact-form select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255,255,255,0.15);
+  color: var(--text-color);
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.35);
+}
+.contact-form select:focus {
+  outline: none;
+  border-color: rgba(255,255,255,0.35);
+}
