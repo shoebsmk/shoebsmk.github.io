@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .glass-card {
+    @apply bg-white/85 backdrop-blur-lg border border-black/5 rounded-2xl shadow-xl p-8 transition-all duration-150 hover:-translate-y-1 hover:shadow-2xl;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  }
+  
+  .btn-glass {
+    @apply inline-block px-8 py-3 bg-white/90 border border-black/10 rounded-full text-[#2d3748] font-semibold backdrop-blur-sm transition-all duration-150 hover:bg-white hover:scale-105;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-glass-sm {
+    @apply inline-block px-4 py-2 bg-white/90 border border-black/10 rounded-full text-[#2d3748] text-sm font-semibold backdrop-blur-sm transition-all duration-150 hover:bg-white hover:scale-105;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-glass-lg {
+    @apply inline-block px-8 py-4 bg-white/90 border border-black/10 rounded-full text-[#2d3748] text-lg font-semibold backdrop-blur-sm transition-all duration-150 hover:bg-white hover:scale-105;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar.scrolled {
+    @apply bg-white/85 backdrop-blur-[60px] py-4 border-b border-black/5;
+    backdrop-filter: blur(60px) saturate(180%);
+    -webkit-backdrop-filter: blur(60px) saturate(180%);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      @apply hidden fixed top-20 left-0 w-full bg-white/90 backdrop-blur-[80px] flex-col items-center py-8 gap-6 border-b border-black/5 shadow-xl max-h-0 overflow-hidden opacity-0 -translate-y-5 transition-all duration-150 z-[1002];
+      backdrop-filter: blur(80px) saturate(200%);
+      -webkit-backdrop-filter: blur(80px) saturate(200%);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+      @apply flex max-h-[500px] opacity-100 translate-y-0;
+    }
+  }
+  
+  .menu-toggle.is-active .bar:nth-child(2) {
+    @apply opacity-0;
+  }
+  
+  .menu-toggle.is-active .bar:nth-child(1) {
+    @apply translate-y-2 rotate-45;
+  }
+  
+  .menu-toggle.is-active .bar:nth-child(3) {
+    @apply -translate-y-2 -rotate-45;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans;
+    background: linear-gradient(135deg, #faf8f3 0%, #f0ede5 50%, #e8e4dc 100%);
+    background-attachment: fixed;
+    color: #2d3748;
+    /* Optimize for performance */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+

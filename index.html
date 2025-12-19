@@ -11,71 +11,66 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css?v=14">
-    <link rel="stylesheet" href="css/components/buttons.css">
-    <link rel="stylesheet" href="css/utilities.css">
-    <link rel="stylesheet" href="css/components/navbar.css">
-    <link rel="stylesheet" href="css/components/hero.css">
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/src/styles/input.css">
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a class="navbar-brand" href="#">Shoeb.</a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <nav class="navbar fixed top-0 w-full z-[1000] py-6 transition-all duration-300">
+        <div class="container max-w-7xl mx-auto px-5 flex justify-between items-center">
+            <a class="navbar-brand text-3xl font-extrabold tracking-wide text-[#2d3748]" href="#">Shoeb.</a>
+            <div class="menu-toggle md:hidden cursor-pointer absolute right-5 top-1/2 -translate-y-1/2 z-[1001]" id="mobile-menu">
+                <span class="bar block w-6 h-0.5 my-1.5 transition-all duration-150 bg-[#2d3748]"></span>
+                <span class="bar block w-6 h-0.5 my-1.5 transition-all duration-150 bg-[#2d3748]"></span>
+                <span class="bar block w-6 h-0.5 my-1.5 transition-all duration-150 bg-[#2d3748]"></span>
             </div>
-            <ul class="nav-links">
-                <li><a class="nav-link" href="#home">Home</a></li>
-                <li><a class="nav-link" href="#about">About</a></li>
-                <li><a class="nav-link" href="#services">Services</a></li>
-                <li><a class="nav-link" href="#experience">Experience</a></li>
-                <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <li><a class="nav-link" href="#contact">Contact</a></li>
+            <ul class="nav-links hidden md:flex gap-8">
+                <li><a class="nav-link font-medium relative text-[#2d3748] after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-[#4c51bf] after:transition-all after:duration-150 hover:after:w-full" href="#home">Home</a></li>
+                <li><a class="nav-link font-medium relative text-[#2d3748] after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-[#4c51bf] after:transition-all after:duration-150 hover:after:w-full" href="#about">About</a></li>
+                <li><a class="nav-link font-medium relative text-[#2d3748] after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-[#4c51bf] after:transition-all after:duration-150 hover:after:w-full" href="#services">Services</a></li>
+                <li><a class="nav-link font-medium relative text-[#2d3748] after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-[#4c51bf] after:transition-all after:duration-150 hover:after:w-full" href="#experience">Experience</a></li>
+                <li><a class="nav-link font-medium relative text-[#2d3748] after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-[#4c51bf] after:transition-all after:duration-150 hover:after:w-full" href="#portfolio">Portfolio</a></li>
+                <li><a class="nav-link font-medium relative text-[#2d3748] after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-[#4c51bf] after:transition-all after:duration-150 hover:after:w-full" href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1>Hi, I am Shoeb Khan</h1>
-            <p>Software Engineer | Full Stack Developer | Mobile Architect</p>
-            <a href="#experience" class="btn-glass">My Work</a>
-            <a href="#contact" class="btn-glass u-ml-16">Contact Me</a>
-            <div class="u-mt-24">
-                <a href="projects.html" class="btn-glass btn-lg">
-                    My Projects <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+    <section id="home" class="hero min-h-screen flex items-center justify-center text-center relative pt-20 overflow-hidden">
+        <div class="container max-w-7xl mx-auto px-5 relative z-20">
+            <h1 class="text-6xl md:text-7xl mb-4 bg-gradient-to-r from-[#4c51bf] to-[#3730a3] bg-clip-text text-transparent">Hi, I am Shoeb Khan</h1>
+            <p class="text-2xl text-[#2d3748] mb-8 opacity-75">Software Engineer | Full Stack Developer | Mobile Architect</p>
+            <div class="flex flex-wrap gap-4 justify-center relative z-10">
+                <a href="#experience" class="btn-glass relative z-10">My Work</a>
+                <a href="#contact" class="btn-glass relative z-10">Contact Me</a>
+            </div>
+            <div class="mt-6 relative z-10">
+                <a href="projects.html" class="btn-glass-lg relative z-10">
+                    My Projects <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="glass-card about-grid">
+    <section id="about" class="py-24">
+        <div class="container max-w-7xl mx-auto px-5">
+            <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">About Me</h2>
+            <div class="glass-card grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16 items-center">
                 <div>
-                    <img src="images/linkedinprofilepic.jpeg" alt="Shoeb Khan" class="about-img">
+                    <img src="/images/linkedinprofilepic.jpeg" alt="Shoeb Khan" class="w-full rounded-3xl border-4 border-white/20 shadow-xl">
                 </div>
-                <div class="about-info">
-                    <h3>I am a Software Engineer.</h3>
-                    <p>I’m a software developer with five years of experience creating modern, intuitive mobile and web
-                        experiences.</p>
-                    <br>
-                    <p>I focus on building robust mobile architectures, streamlining CI/CD pipelines on AWS, and
-                        delivering fast, high-performance user experiences end to end.</p>
-                    <ul class="about-details">
-                        <li><i class="fas fa-briefcase"></i> 5 Years Experience</li>
-                        <li><i class="fas fa-graduation-cap"></i> Master's from DePaul University</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Chicago, IL</li>
-                        <li class="email-item"><i class="fas fa-envelope"></i> shoebwm@gmail.com</li>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-[#2d3748]">I am a Software Engineer.</h3>
+                    <p class="mb-4 text-[#2d3748] opacity-90">I'm a software developer with five years of experience creating modern, intuitive mobile and web experiences.</p>
+                    <p class="mb-8 text-[#2d3748] opacity-90">I focus on building robust mobile architectures, streamlining CI/CD pipelines on AWS, and delivering fast, high-performance user experiences end to end.</p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <li class="bg-white/60 p-4 rounded-xl border border-black/5 flex items-center gap-2.5 text-sm text-[#2d3748]"><i class="fas fa-briefcase text-[#4c51bf] text-lg"></i> 5 Years Experience</li>
+                        <li class="bg-white/60 p-4 rounded-xl border border-black/5 flex items-center gap-2.5 text-sm text-[#2d3748]"><i class="fas fa-graduation-cap text-[#4c51bf] text-lg"></i> Master's from DePaul University</li>
+                        <li class="bg-white/60 p-4 rounded-xl border border-black/5 flex items-center gap-2.5 text-sm text-[#2d3748]"><i class="fas fa-map-marker-alt text-[#4c51bf] text-lg"></i> Chicago, IL</li>
+                        <li class="bg-white/60 p-4 rounded-xl border border-black/5 flex items-center gap-2.5 text-sm md:col-span-2 break-all text-[#2d3748]"><i class="fas fa-envelope text-[#4c51bf] text-lg"></i> shoebwm@gmail.com</li>
                     </ul>
                 </div>
             </div>
@@ -83,131 +78,118 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <h2 class="section-title">Services</h2>
-            <div class="services-grid">
-                <div class="glass-card service-card">
-                    <div class="service-icon"><i class="fas fa-layer-group"></i></div>
-                    <h3>Full Stack Dev</h3>
-                    <p>Building custom full-stack web applications using MERN, LAMP, .Net, or Spring Java stacks
-                        tailored to your business needs.</p>
+    <section id="services" class="py-24">
+        <div class="container max-w-7xl mx-auto px-5">
+            <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card text-center">
+                    <div class="text-5xl mb-6 text-[#4c51bf] bg-white/80 w-20 h-20 flex items-center justify-center rounded-full mx-auto"><i class="fas fa-layer-group"></i></div>
+                    <h3 class="text-xl font-bold mb-4 text-[#2d3748]">Full Stack Dev</h3>
+                    <p class="text-[#2d3748] opacity-90">Building custom full-stack web applications using MERN, LAMP, .Net, or Spring Java stacks tailored to your business needs.</p>
                 </div>
-                <div class="glass-card service-card">
-                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>Mobile Apps</h3>
-                    <p>High-quality Android (Java/Kotlin) and iOS (Swift/Obj-C) applications with seamless and
-                        platform-specific experiences.</p>
+                <div class="glass-card text-center">
+                    <div class="text-5xl mb-6 text-[#4c51bf] bg-white/80 w-20 h-20 flex items-center justify-center rounded-full mx-auto"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 class="text-xl font-bold mb-4 text-[#2d3748]">Mobile Apps</h3>
+                    <p class="text-[#2d3748] opacity-90">High-quality Android (Java/Kotlin) and iOS (Swift/Obj-C) applications with seamless and platform-specific experiences.</p>
                 </div>
-                <div class="glass-card service-card">
-                    <div class="service-icon"><i class="fas fa-cloud"></i></div>
-                    <h3>Cloud & DevOps</h3>
-                    <p>Designing scalable infrastructure on AWS/Azure and orchestrating pipelines using Docker,
-                        Kubernetes, and CI/CD tools.</p>
+                <div class="glass-card text-center">
+                    <div class="text-5xl mb-6 text-[#4c51bf] bg-white/80 w-20 h-20 flex items-center justify-center rounded-full mx-auto"><i class="fas fa-cloud"></i></div>
+                    <h3 class="text-xl font-bold mb-4 text-[#2d3748]">Cloud & DevOps</h3>
+                    <p class="text-[#2d3748] opacity-90">Designing scalable infrastructure on AWS/Azure and orchestrating pipelines using Docker, Kubernetes, and CI/CD tools.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <div class="glass-card timeline-item">
-                    <h3>Software Engineer</h3>
-                    <h4>FNR Solutions, Inc. • Jul 2024 - Present</h4>
-                    <p>Developed full-stack web applications using React and Python, optimizing interfaces and backend
-                        data processing. Implemented AWS infrastructure with Terraform for automated deployments and
-                        integrated Okta SSO for enhanced security. Collaborated on CI/CD pipelines using AWS
-                        CodePipeline.</p>
+    <section id="experience" class="py-24">
+        <div class="container max-w-7xl mx-auto px-5">
+            <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">Work Experience</h2>
+            <div class="timeline max-w-4xl mx-auto relative">
+                <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative before:content-[''] before:absolute before:-left-[9px] before:top-0 before:w-4 before:h-4 before:bg-[#4c51bf] before:rounded-full before:shadow-[0_0_10px] before:shadow-[#4c51bf]/50">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Software Engineer</h3>
+                    <h4 class="text-lg mb-4 text-[#2d3748] opacity-75">FNR Solutions, Inc. • Jul 2024 - Present</h4>
+                    <p class="text-[#2d3748] opacity-90">Developed full-stack web applications using React and Python, optimizing interfaces and backend data processing. Implemented AWS infrastructure with Terraform for automated deployments and integrated Okta SSO for enhanced security. Collaborated on CI/CD pipelines using AWS CodePipeline.</p>
                 </div>
-                <div class="glass-card timeline-item">
-                    <h3>Software Engineer (Flutter)</h3>
-                    <h4>Align Astrology • Jan 2024 - Jul 2024</h4>
-                    <p>Developed AI-powered feature leveraging GPT for user compatibility prediction. Redesigned
-                        horoscope visualization with customized insights, boosting user engagement by 20%. Implemented
-                        CI/CD pipelines using AWS CodePipeline and elevated UX with intuitive UI guides.</p>
+                <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative before:content-[''] before:absolute before:-left-[9px] before:top-0 before:w-4 before:h-4 before:bg-[#4c51bf] before:rounded-full before:shadow-[0_0_10px] before:shadow-[#4c51bf]/50">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Software Engineer (Flutter)</h3>
+                    <h4 class="text-lg mb-4 text-[#2d3748] opacity-75">Align Astrology • Jan 2024 - Jul 2024</h4>
+                    <p class="text-[#2d3748] opacity-90">Developed AI-powered feature leveraging GPT for user compatibility prediction. Redesigned horoscope visualization with customized insights, boosting user engagement by 20%. Implemented CI/CD pipelines using AWS CodePipeline and elevated UX with intuitive UI guides.</p>
                 </div>
-                <div class="glass-card timeline-item">
-                    <h3>Software Developer</h3>
-                    <h4>SkyIT Services • Feb 2023 - Jan 2024</h4>
-                    <p>Enhanced search and filtering systems for Android and iOS applications. Implemented offline
-                        caching with Room, reducing load times by 30% and increasing user engagement by 25%. Conducted
-                        code reviews and initiated migration from Java to Kotlin with Jetpack Compose.</p>
+                <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative before:content-[''] before:absolute before:-left-[9px] before:top-0 before:w-4 before:h-4 before:bg-[#4c51bf] before:rounded-full before:shadow-[0_0_10px] before:shadow-[#4c51bf]/50">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Software Developer</h3>
+                    <h4 class="text-lg mb-4 text-[#2d3748] opacity-75">SkyIT Services • Feb 2023 - Jan 2024</h4>
+                    <p class="text-[#2d3748] opacity-90">Enhanced search and filtering systems for Android and iOS applications. Implemented offline caching with Room, reducing load times by 30% and increasing user engagement by 25%. Conducted code reviews and initiated migration from Java to Kotlin with Jetpack Compose.</p>
                 </div>
-                <div class="glass-card timeline-item">
-                    <h3>Mobile Application Developer</h3>
-                    <h4>Checago Coffee App • Nov 2022 - May 2023</h4>
-                    <p>Designed order alert system with push notifications using Firebase Cloud Messaging. Streamlined
-                        order placement by merging payment gateway phases. Configured MySQL database and AWS cloud
-                        services (EC2, S3, EBS) for API integration.</p>
+                <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative before:content-[''] before:absolute before:-left-[9px] before:top-0 before:w-4 before:h-4 before:bg-[#4c51bf] before:rounded-full before:shadow-[0_0_10px] before:shadow-[#4c51bf]/50">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Mobile Application Developer</h3>
+                    <h4 class="text-lg mb-4 text-[#2d3748] opacity-75">Checago Coffee App • Nov 2022 - May 2023</h4>
+                    <p class="text-[#2d3748] opacity-90">Designed order alert system with push notifications using Firebase Cloud Messaging. Streamlined order placement by merging payment gateway phases. Configured MySQL database and AWS cloud services (EC2, S3, EBS) for API integration.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio">
-        <div class="container">
-            <h2 class="section-title">Portfolio</h2>
-            <div class="portfolio-grid">
+    <section id="portfolio" class="py-24">
+        <div class="container max-w-7xl mx-auto px-5">
+            <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="glass-card portfolio-item">
-                    <img src="images/s.mart.jpg?v=1" alt="S. Mart" class="portfolio-img">
-                    <h3>S. Mart</h3>
-                    <p>Enterprise web application providing unique shopping experience developed using Spring Java.</p>
-                    <a href="https://github.com/shoebsmk/group2" class="btn-glass btn-sm u-mt-16"><i class="fab fa-github"></i> View on GitHub</a>
+                <div class="glass-card overflow-hidden relative group">
+                    <img src="/images/s.mart.jpg?v=1" alt="S. Mart" class="w-full h-64 object-cover rounded-xl mb-6 transition-transform duration-200 group-hover:scale-105">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">S. Mart</h3>
+                    <p class="mb-4 text-[#2d3748] opacity-90">Enterprise web application providing unique shopping experience developed using Spring Java.</p>
+                    <a href="https://github.com/shoebsmk/group2" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
                 <!-- Project 2 -->
-                <div class="glass-card portfolio-item">
-                    <img src="images/loop.jpeg?v=1" alt="Walking Tour" class="portfolio-img">
-                    <h3>Walking Tour – Chicago Loop</h3>
-                    <p>A mobile app providing a guided tour of the most famous constructions of the Loop, Chicago.</p>
-                    <a href="https://github.com/shoebsmk/Tours2" class="btn-glass btn-sm u-mt-16"><i class="fab fa-github"></i> View on GitHub</a>
+                <div class="glass-card overflow-hidden relative group">
+                    <img src="/images/loop.jpeg?v=1" alt="Walking Tour" class="w-full h-64 object-cover rounded-xl mb-6 transition-transform duration-200 group-hover:scale-105">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Walking Tour – Chicago Loop</h3>
+                    <p class="mb-4 text-[#2d3748] opacity-90">A mobile app providing a guided tour of the most famous constructions of the Loop, Chicago.</p>
+                    <a href="https://github.com/shoebsmk/Tours2" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
                 <!-- Project 3 -->
-                <div class="glass-card portfolio-item">
-                    <img src="images/spaceinvaders.jpg?v=1" alt="Space Invaders" class="portfolio-img">
-                    <h3>Space Invaders</h3>
-                    <p>An arcade game made from scratch using C# and best software architecture practices.</p>
-                    <a href="https://github.com/shoebsmk/SpaceInvaders" class="btn-glass btn-sm u-mt-16"><i class="fab fa-github"></i> View on GitHub</a>
+                <div class="glass-card overflow-hidden relative group">
+                    <img src="/images/spaceinvaders.jpg?v=1" alt="Space Invaders" class="w-full h-64 object-cover rounded-xl mb-6 transition-transform duration-200 group-hover:scale-105">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Space Invaders</h3>
+                    <p class="mb-4 text-[#2d3748] opacity-90">An arcade game made from scratch using C# and best software architecture practices.</p>
+                    <a href="https://github.com/shoebsmk/SpaceInvaders" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="projects.html" class="btn-glass btn-lg">
-                    My Projects <i class="fas fa-arrow-right" style="margin-left: 0.5rem;"></i>
+            <div class="text-center mt-12">
+                <a href="projects.html" class="btn-glass-lg">
+                    My Projects <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <div class="container contact-container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="glass-card" style="text-align: center;">
-                <p style="color: var(--text-muted); margin-bottom: 1rem;">Open the contact form to get in touch.</p>
-                <a href="contact.html" class="btn-glass btn-lg">Open Contact Form</a>
+    <section id="contact" class="py-24">
+        <div class="container max-w-4xl mx-auto px-5">
+            <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">Contact Me</h2>
+            <div class="glass-card text-center">
+                <p class="text-[#2d3748] opacity-90 mb-4">Open the contact form to get in touch.</p>
+                <a href="contact.html" class="btn-glass-lg">Open Contact Form</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-icons">
-                <!-- <a href="https://www.instagram.com/shoeb_mk_" target="_blank"><i class="fab fa-instagram"></i></a> -->
-                <!-- <a href="https://www.x.com/shoebsmk" target="_blank"><i class="fab fa-twitter"></i></a> -->
-                <a href="https://www.linkedin.com/in/shoebsmk/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/shoebsmk/" target="_blank"><i class="fab fa-github"></i></a>
+    <footer class="py-8 text-center bg-white/60 backdrop-blur-sm border-t border-black/5">
+        <div class="container max-w-7xl mx-auto px-5">
+            <div class="social-icons flex justify-center gap-6 mt-4">
+                <!-- <a href="https://www.instagram.com/shoeb_mk_" target="_blank"><i class="fab fa-instagram text-2xl text-[#2d3748] hover:text-[#4c51bf] hover:-translate-y-1 transition-all"></i></a> -->
+                <!-- <a href="https://www.x.com/shoebsmk" target="_blank"><i class="fab fa-twitter text-2xl text-[#2d3748] hover:text-[#4c51bf] hover:-translate-y-1 transition-all"></i></a> -->
+                <a href="https://www.linkedin.com/in/shoebsmk/" target="_blank" class="text-2xl text-[#2d3748] hover:text-[#4c51bf] hover:-translate-y-1 transition-all duration-150"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/shoebsmk/" target="_blank" class="text-2xl text-[#2d3748] hover:text-[#4c51bf] hover:-translate-y-1 transition-all duration-150"><i class="fab fa-github"></i></a>
             </div>
-            <p style="margin-top: 1rem; color: var(--text-muted);">&copy; 2025 Shoeb Khan. All Rights Reserved.</p>
+            <p class="mt-4 text-[#2d3748] opacity-75">&copy; 2025 Shoeb Khan. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script src="js/nav.js"></script>
-    <script src="js/scroll.js"></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 
 </html>
