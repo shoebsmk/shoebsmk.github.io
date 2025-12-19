@@ -157,8 +157,8 @@ export function renderHero() {
     }
 
     heroSection.innerHTML = `
-      <h1 class="text-8xl md:text-9xl mb-4 bg-gradient-to-r from-[#4c51bf] to-[#3730a3] bg-clip-text text-transparent">${escapeHtml(name)}</h1>
-      <p class="text-3xl text-[#2d3748] mb-8 opacity-75">${escapeHtml(title)}</p>
+      <h1 class="text-8xl md:text-9xl mb-4 bg-gradient-to-r from-[#4c51bf]/70 to-[#3730a3]/70 bg-clip-text text-transparent">${escapeHtml(name)}</h1>
+      <p class="text-[28px] text-[#2d3748] mb-8 opacity-75">${escapeHtml(title)}</p>
       <div class="flex flex-wrap gap-4 justify-center relative z-10">
         ${buttons.map(btn => {
           if (!btn || !btn.href || !btn.text) return ''
@@ -209,12 +209,12 @@ export function renderExperience() {
     }
 
     container.innerHTML = `
-      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
+      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf]/70 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="timeline max-w-4xl mx-auto relative">
         ${items.map(item => {
           if (!item || !item.position || !item.company) return ''
           return `
-            <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative">
+            <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/20 relative">
               <h3 class="text-xl font-bold mb-2 text-[#2d3748]">${escapeHtml(item.position)}</h3>
               <h4 class="text-lg mb-4 text-[#2d3748] opacity-75">${escapeHtml(item.company)}${item.period ? ' • ' + escapeHtml(item.period) : ''}</h4>
               <p class="text-[#2d3748] opacity-90">${escapeHtml(item.description || '')}</p>
@@ -263,19 +263,19 @@ export function renderProjects() {
     }
 
     container.innerHTML = `
-      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
+      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf]/70 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         ${items.map(project => {
           if (!project || !project.name || !project.url) return ''
           return `
             <a href="${escapeUrl(project.url)}" target="_blank" rel="noopener noreferrer" class="glass-card overflow-hidden relative group cursor-pointer block p-6 flex flex-col">
               <div class="flex items-start gap-4 mb-4 min-h-[80px]">
-                <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center bg-gradient-to-br from-[#4c51bf] to-[#3730a3] rounded-xl">
+                <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center bg-gradient-to-br from-[#4c51bf]/70 to-[#3730a3]/70 rounded-xl">
                   <i class="fas ${escapeHtml(project.icon || 'fa-folder')} text-white text-2xl"></i>
                 </div>
                 <div class="flex-1">
                   <h3 class="text-xl font-bold mb-2 text-[#2d3748]">${escapeHtml(project.name)}</h3>
-                  <p class="text-[#4c51bf] text-sm font-semibold">${escapeHtml(project.category || '')}</p>
+                  <p class="text-[#4c51bf]/70 text-sm font-semibold">${escapeHtml(project.category || '')}</p>
                 </div>
               </div>
               <p class="text-[#2d3748] opacity-90 leading-relaxed flex-grow">${escapeHtml(project.description || '')}</p>
@@ -319,7 +319,7 @@ export function renderAbout() {
     }
 
     container.innerHTML = `
-      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
+      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf]/70 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="glass-card max-w-5xl mx-auto">
         <!-- Profile Header -->
         <div class="text-center mb-10">
@@ -346,7 +346,7 @@ export function renderAbout() {
             const value = info.value || ''
             return `
               <div class="bg-white/40 p-4 rounded-xl border border-black/5 text-center hover:bg-white/50 transition-all duration-200">
-                <i class="fas ${escapeHtml(info.icon)} text-[#4c51bf] text-2xl mb-2"></i>
+                <i class="fas ${escapeHtml(info.icon)} text-[#4c51bf]/70 text-2xl mb-2"></i>
                 <p class="text-sm font-semibold text-[#2d3748] ${value.includes('@') ? 'break-all' : ''}">${escapeHtml(value)}</p>
                 <p class="text-xs text-[#2d3748] opacity-75">${escapeHtml(info.label || '')}</p>
               </div>
@@ -363,7 +363,7 @@ export function renderAbout() {
                 if (!service || !service.icon) return ''
                 return `
                   <div class="bg-white/30 p-6 rounded-xl border border-black/5 hover:bg-white/40 hover:shadow-lg transition-all duration-200 group">
-                    <div class="text-4xl mb-4 text-[#4c51bf] bg-white/50 w-20 h-20 flex items-center justify-center rounded-full mx-auto group-hover:scale-110 transition-transform duration-200">
+                    <div class="text-4xl mb-4 text-[#4c51bf]/70 bg-white/50 w-20 h-20 flex items-center justify-center rounded-full mx-auto group-hover:scale-110 transition-transform duration-200">
                       <i class="fas ${escapeHtml(service.icon)}"></i>
                     </div>
                     <h5 class="text-lg font-bold mb-3 text-[#2d3748] text-center">${escapeHtml(service.title || '')}</h5>
@@ -416,7 +416,7 @@ export function renderSkills() {
     }
 
     container.innerHTML = `
-      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
+      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf]/70 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-5xl mx-auto">
         ${items.map(skill => {
           if (!skill || !skill.name || !skill.icon) return ''
@@ -468,20 +468,20 @@ export function renderContact() {
     }
 
     container.innerHTML = `
-      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
+      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf]/70 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="glass-card">
         <form id="contactForm" class="space-y-6">
           <div>
             <label for="name" class="block mb-2 font-semibold text-[#2d3748]">${escapeHtml(form.name.label || 'Name')} ${form.name.required ? '<span class="text-red-500">*</span>' : ''}</label>
-            <input type="text" id="name" name="name" ${form.name.required ? 'required' : ''} class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-[#2d3748] placeholder:text-[#2d3748]/50 focus:outline-none focus:border-[#4c51bf]/50 transition-colors duration-150" placeholder="${escapeHtml(form.name.placeholder || '')}">
+            <input type="text" id="name" name="name" ${form.name.required ? 'required' : ''} class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-[#2d3748] placeholder:text-[#2d3748]/50 focus:outline-none focus:border-[#4c51bf]/40 transition-colors duration-150" placeholder="${escapeHtml(form.name.placeholder || '')}">
           </div>
           <div>
             <label for="email" class="block mb-2 font-semibold text-[#2d3748]">${escapeHtml(form.email.label || 'Email')} ${form.email.required ? '<span class="text-red-500">*</span>' : ''}</label>
-            <input type="email" id="email" name="email" ${form.email.required ? 'required' : ''} class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-[#2d3748] placeholder:text-[#2d3748]/50 focus:outline-none focus:border-[#4c51bf]/50 transition-colors duration-150" placeholder="${escapeHtml(form.email.placeholder || '')}">
+            <input type="email" id="email" name="email" ${form.email.required ? 'required' : ''} class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-[#2d3748] placeholder:text-[#2d3748]/50 focus:outline-none focus:border-[#4c51bf]/40 transition-colors duration-150" placeholder="${escapeHtml(form.email.placeholder || '')}">
           </div>
           <div>
             <label for="message" class="block mb-2 font-semibold text-[#2d3748]">${escapeHtml(form.message.label || 'Message')}</label>
-            <textarea id="message" name="message" rows="4" ${form.message.required ? 'required' : ''} class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-[#2d3748] placeholder:text-[#2d3748]/50 focus:outline-none focus:border-[#4c51bf]/50 transition-colors duration-150 resize-none" placeholder="${escapeHtml(form.message.placeholder || '')}"></textarea>
+            <textarea id="message" name="message" rows="4" ${form.message.required ? 'required' : ''} class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-[#2d3748] placeholder:text-[#2d3748]/50 focus:outline-none focus:border-[#4c51bf]/40 transition-colors duration-150 resize-none" placeholder="${escapeHtml(form.message.placeholder || '')}"></textarea>
           </div>
           <div id="contactSuccessMessage" class="hidden p-4 rounded-lg bg-green-500/20 border border-green-500/50 text-green-700 text-center"></div>
           <div id="contactErrorMessage" class="hidden p-4 rounded-lg bg-red-500/20 border border-red-500/50 text-red-700 text-center"></div>
@@ -530,7 +530,7 @@ export function renderFooter() {
         ${Array.isArray(socialLinks) ? socialLinks.map(link => {
           if (!link || !link.url || !link.name) return ''
           return `
-            <a href="${escapeUrl(link.url)}" target="_blank" rel="noopener noreferrer" class="text-2xl text-[#2d3748] hover:text-[#4c51bf] hover:-translate-y-1 transition-all duration-150" aria-label="${escapeHtml(link.name)}">
+            <a href="${escapeUrl(link.url)}" target="_blank" rel="noopener noreferrer" class="text-2xl text-[#2d3748] hover:text-[#4c51bf]/70/70 hover:-translate-y-1 transition-all duration-150" aria-label="${escapeHtml(link.name)}">
               <i class="${escapeHtml(link.icon || '')}"></i>
             </a>
           `

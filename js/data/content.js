@@ -58,6 +58,13 @@ export const siteData = {
     title: 'Projects',
     items: [
       {
+        name: 'SmartChat',
+        category: 'Real-time Messenger • AI Integration',
+        description: 'Real-time messenger app with chatrooms, user profiles, typing and online indicators, read receipts, media sharing, dark mode, and an AI Assist tab for chatting with multiple contacts using AI.',
+        url: 'https://github.com/shoebsmk',
+        icon: 'fa-comments'
+      },
+      {
         name: 'S. Mart',
         category: 'Spring Java • Enterprise Web Application',
         description: 'Enterprise e-commerce platform built with Spring Java, offering seamless shopping with product catalogs, secure checkout, and order tracking.',
