@@ -1,26 +1,52 @@
-.contact-form .form-row { margin-bottom: 1rem; }
-.contact-form label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--glass-border);
-  background: rgba(255,255,255,0.15);
-  color: var(--text-color);
+/**
+ * Contact Page Styles
+ * 
+ * Styles specific to the contact form page including:
+ * - Form input fields
+ * - Form labels and layout
+ * - Focus states and validation
+ * 
+ * @file css/pages/contact.css
+ */
+
+.contact-form .form-row { 
+    margin-bottom: 1rem; 
 }
+
+.contact-form label { 
+    display: block; 
+    margin-bottom: 0.5rem; 
+    font-weight: 600; 
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg-light);
+    color: var(--text-color);
+    transition: border-color var(--transition-fast);
+}
+
 .contact-form select {
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--glass-border);
-  background: rgba(255,255,255,0.15);
-  color: var(--text-color);
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg-light);
+    color: var(--text-color);
+    transition: border-color var(--transition-fast);
 }
-.contact-form input:focus, .contact-form textarea:focus {
-  outline: none;
-  border-color: rgba(255,255,255,0.35);
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--glass-border-light);
 }
+
 .contact-form select:focus {
-  outline: none;
-  border-color: rgba(255,255,255,0.35);
+    outline: none;
+    border-color: var(--glass-border-light);
 }

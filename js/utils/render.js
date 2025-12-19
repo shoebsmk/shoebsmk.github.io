@@ -1,19 +1,95 @@
 /**
- * Rendering Utilities
+ * Rendering Utilities Module
  * 
- * Functions to dynamically render sections from data
+ * Provides functions to dynamically render website sections from centralized data.
+ * All rendering functions include XSS protection through HTML escaping.
+ * 
+ * @module utils/render
+ * @requires ../data/content
  */
 
 import { siteData } from '../data/content.js'
 
 /**
+ * DOM selector constants
+ * @constant {Object<string, string>}
+ */
+const SELECTORS = {
+  HERO_SECTION: '#home .container',
+  EXPERIENCE_SECTION: '#experience',
+  EXPERIENCE_CONTAINER: '#experience .container',
+  PROJECTS_SECTION: '#portfolio',
+  PROJECTS_CONTAINER: '#portfolio .container',
+  ABOUT_SECTION: '#about',
+  ABOUT_CONTAINER: '#about .container',
+  SKILLS_SECTION: '#skills',
+  SKILLS_CONTAINER: '#skills .container',
+  CONTACT_SECTION: '#contact',
+  CONTACT_CONTAINER: '#contact .container',
+  FOOTER: 'footer',
+  FOOTER_CONTAINER: 'footer .container',
+  CONTAINER: '.container'
+}
+
+/**
+ * URL validation patterns
+ * @constant {Object<string, string>}
+ */
+const URL_PATTERNS = {
+  HTTP: 'http://',
+  HTTPS: 'https://',
+  MAILTO: 'mailto:',
+  RELATIVE: '/',
+  HASH: '#'
+}
+
+/**
+ * Default fallback values
+ * @constant {Object<string, string>}
+ */
+const DEFAULTS = {
+  INVALID_URL: '#',
+  EMPTY_STRING: ''
+}
+
+/**
+ * Error messages for rendering
+ * @constant {Object<string, string>}
+ */
+const ERROR_MESSAGES = {
+  HERO_SECTION_NOT_FOUND: 'Hero section or data not found',
+  HERO_DATA_INVALID: 'Invalid hero data structure',
+  EXPERIENCE_SECTION_NOT_FOUND: 'Experience section or data not found',
+  EXPERIENCE_CONTAINER_NOT_FOUND: 'Experience container not found',
+  EXPERIENCE_ITEMS_INVALID: 'Experience items must be an array',
+  PROJECTS_SECTION_NOT_FOUND: 'Projects section or data not found',
+  PROJECTS_CONTAINER_NOT_FOUND: 'Projects container not found',
+  PROJECTS_ITEMS_INVALID: 'Projects items must be an array',
+  ABOUT_SECTION_NOT_FOUND: 'About section or data not found',
+  ABOUT_CONTAINER_NOT_FOUND: 'About container not found',
+  SKILLS_SECTION_NOT_FOUND: 'Skills section or data not found',
+  SKILLS_CONTAINER_NOT_FOUND: 'Skills container not found',
+  SKILLS_ITEMS_INVALID: 'Skills items must be an array',
+  CONTACT_SECTION_NOT_FOUND: 'Contact section or data not found',
+  CONTACT_CONTAINER_NOT_FOUND: 'Contact container not found',
+  CONTACT_FORM_INVALID: 'Invalid contact form data structure'
+}
+
+/**
  * Escape HTML to prevent XSS attacks
+ * 
+ * Uses DOM textContent to safely escape HTML entities.
+ * 
  * @param {string} text - Text to escape
- * @returns {string} Escaped text
+ * @returns {string} Escaped text safe for HTML insertion
+ * 
+ * @example
+ * escapeHtml('<script>alert("xss")</script>')
+ * // Returns: '&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt;'
  */
 function escapeHtml(text) {
   if (typeof text !== 'string') {
-    return String(text || '')
+    return String(text || DEFAULTS.EMPTY_STRING)
   }
   const div = document.createElement('div')
   div.textContent = text
@@ -21,37 +97,62 @@ function escapeHtml(text) {
 }
 
 /**
- * Safely escape URL to prevent XSS
- * @param {string} url - URL to escape
- * @returns {string} Escaped URL
+ * Safely escape and validate URL to prevent XSS
+ * 
+ * Only allows safe URL schemes: http, https, mailto, and relative paths.
+ * Returns '#' for invalid URLs.
+ * 
+ * @param {string} url - URL to escape and validate
+ * @returns {string} Escaped and validated URL, or '#' if invalid
+ * 
+ * @example
+ * escapeUrl('https://example.com') // Returns escaped URL
+ * escapeUrl('javascript:alert(1)') // Returns '#'
  */
 function escapeUrl(url) {
   if (typeof url !== 'string') {
-    return '#'
+    return DEFAULTS.INVALID_URL
   }
-  // Basic URL validation - only allow http, https, mailto, and relative paths
-  if (url.startsWith('http://') || url.startsWith('https://') || 
-      url.startsWith('mailto:') || url.startsWith('/') || url.startsWith('#')) {
+  
+  // Basic URL validation - only allow safe schemes
+  const isSafeUrl = url.startsWith(URL_PATTERNS.HTTP) ||
+                    url.startsWith(URL_PATTERNS.HTTPS) ||
+                    url.startsWith(URL_PATTERNS.MAILTO) ||
+                    url.startsWith(URL_PATTERNS.RELATIVE) ||
+                    url.startsWith(URL_PATTERNS.HASH)
+  
+  if (isSafeUrl) {
     return escapeHtml(url)
   }
-  return '#'
+  
+  return DEFAULTS.INVALID_URL
 }
 
 /**
- * Render hero section
+ * Render hero section with name, title, and action buttons
+ * 
+ * Dynamically renders the hero section from siteData.hero configuration.
+ * Includes XSS protection for all user-generated content.
+ * 
+ * @function renderHero
+ * @returns {void}
+ * 
+ * @example
+ * // Call after DOM is ready
+ * renderHero()
  */
 export function renderHero() {
   try {
-    const heroSection = document.querySelector('#home .container')
+    const heroSection = document.querySelector(SELECTORS.HERO_SECTION)
     if (!heroSection || !siteData.hero) {
-      console.warn('Hero section or data not found')
+      console.warn(ERROR_MESSAGES.HERO_SECTION_NOT_FOUND)
       return
     }
 
     const { name, title, buttons } = siteData.hero
 
     if (!name || !title || !Array.isArray(buttons)) {
-      console.error('Invalid hero data structure')
+      console.error(ERROR_MESSAGES.HERO_DATA_INVALID)
       return
     }
 
@@ -74,26 +175,36 @@ export function renderHero() {
 }
 
 /**
- * Render experience section
+ * Render work experience section with timeline of positions
+ * 
+ * Dynamically renders work experience items from siteData.experience.
+ * Each experience item includes position, company, period, and description.
+ * 
+ * @function renderExperience
+ * @returns {void}
+ * 
+ * @example
+ * // Call after DOM is ready
+ * renderExperience()
  */
 export function renderExperience() {
   try {
-    const experienceSection = document.querySelector('#experience')
+    const experienceSection = document.querySelector(SELECTORS.EXPERIENCE_SECTION)
     if (!experienceSection || !siteData.experience) {
-      console.warn('Experience section or data not found')
+      console.warn(ERROR_MESSAGES.EXPERIENCE_SECTION_NOT_FOUND)
       return
     }
 
     const { title, items } = siteData.experience
-    const container = experienceSection.querySelector('.container')
+    const container = experienceSection.querySelector(SELECTORS.CONTAINER)
 
     if (!container) {
-      console.error('Experience container not found')
+      console.error(ERROR_MESSAGES.EXPERIENCE_CONTAINER_NOT_FOUND)
       return
     }
 
     if (!Array.isArray(items)) {
-      console.error('Experience items must be an array')
+      console.error(ERROR_MESSAGES.EXPERIENCE_ITEMS_INVALID)
       return
     }
 
@@ -118,26 +229,36 @@ export function renderExperience() {
 }
 
 /**
- * Render projects section
+ * Render projects section with grid of project cards
+ * 
+ * Dynamically renders project cards from siteData.projects.
+ * Each project includes name, category, description, URL, and icon.
+ * 
+ * @function renderProjects
+ * @returns {void}
+ * 
+ * @example
+ * // Call after DOM is ready
+ * renderProjects()
  */
 export function renderProjects() {
   try {
-    const projectsSection = document.querySelector('#portfolio')
+    const projectsSection = document.querySelector(SELECTORS.PROJECTS_SECTION)
     if (!projectsSection || !siteData.projects) {
-      console.warn('Projects section or data not found')
+      console.warn(ERROR_MESSAGES.PROJECTS_SECTION_NOT_FOUND)
       return
     }
 
     const { title, items } = siteData.projects
-    const container = projectsSection.querySelector('.container')
+    const container = projectsSection.querySelector(SELECTORS.CONTAINER)
 
     if (!container) {
-      console.error('Projects container not found')
+      console.error(ERROR_MESSAGES.PROJECTS_CONTAINER_NOT_FOUND)
       return
     }
 
     if (!Array.isArray(items)) {
-      console.error('Projects items must be an array')
+      console.error(ERROR_MESSAGES.PROJECTS_ITEMS_INVALID)
       return
     }
 
@@ -169,21 +290,31 @@ export function renderProjects() {
 }
 
 /**
- * Render about section
+ * Render about section with profile information
+ * 
+ * Dynamically renders about section including profile image, bio paragraphs,
+ * quick info cards, and freelance services from siteData.about.
+ * 
+ * @function renderAbout
+ * @returns {void}
+ * 
+ * @example
+ * // Call after DOM is ready
+ * renderAbout()
  */
 export function renderAbout() {
   try {
-    const aboutSection = document.querySelector('#about')
+    const aboutSection = document.querySelector(SELECTORS.ABOUT_SECTION)
     if (!aboutSection || !siteData.about) {
-      console.warn('About section or data not found')
+      console.warn(ERROR_MESSAGES.ABOUT_SECTION_NOT_FOUND)
       return
     }
 
     const { title, profileImage, subtitle, tagline, paragraphs, quickInfo, freelanceServices } = siteData.about
-    const container = aboutSection.querySelector('.container')
+    const container = aboutSection.querySelector(SELECTORS.CONTAINER)
 
     if (!container) {
-      console.error('About container not found')
+      console.error(ERROR_MESSAGES.ABOUT_CONTAINER_NOT_FOUND)
       return
     }
 
@@ -251,26 +382,36 @@ export function renderAbout() {
 }
 
 /**
- * Render skills section
+ * Render technical skills section with skill badges
+ * 
+ * Dynamically renders skill badges from siteData.skills.
+ * Each skill includes name and icon image.
+ * 
+ * @function renderSkills
+ * @returns {void}
+ * 
+ * @example
+ * // Call after DOM is ready
+ * renderSkills()
  */
 export function renderSkills() {
   try {
-    const skillsSection = document.querySelector('#skills')
+    const skillsSection = document.querySelector(SELECTORS.SKILLS_SECTION)
     if (!skillsSection || !siteData.skills) {
-      console.warn('Skills section or data not found')
+      console.warn(ERROR_MESSAGES.SKILLS_SECTION_NOT_FOUND)
       return
     }
 
     const { title, items } = siteData.skills
-    const container = skillsSection.querySelector('.container')
+    const container = skillsSection.querySelector(SELECTORS.CONTAINER)
 
     if (!container) {
-      console.error('Skills container not found')
+      console.error(ERROR_MESSAGES.SKILLS_CONTAINER_NOT_FOUND)
       return
     }
 
     if (!Array.isArray(items)) {
-      console.error('Skills items must be an array')
+      console.error(ERROR_MESSAGES.SKILLS_ITEMS_INVALID)
       return
     }
 
@@ -293,26 +434,36 @@ export function renderSkills() {
 }
 
 /**
- * Render contact section
+ * Render contact section with contact form
+ * 
+ * Dynamically renders contact form from siteData.contact.
+ * Form includes name, email, and message fields with validation.
+ * 
+ * @function renderContact
+ * @returns {void}
+ * 
+ * @example
+ * // Call after DOM is ready
+ * renderContact()
  */
 export function renderContact() {
   try {
-    const contactSection = document.querySelector('#contact')
+    const contactSection = document.querySelector(SELECTORS.CONTACT_SECTION)
     if (!contactSection || !siteData.contact) {
-      console.warn('Contact section or data not found')
+      console.warn(ERROR_MESSAGES.CONTACT_SECTION_NOT_FOUND)
       return
     }
 
     const { title, form } = siteData.contact
-    const container = contactSection.querySelector('.container')
+    const container = contactSection.querySelector(SELECTORS.CONTAINER)
 
     if (!container) {
-      console.error('Contact container not found')
+      console.error(ERROR_MESSAGES.CONTACT_CONTAINER_NOT_FOUND)
       return
     }
 
     if (!form || !form.name || !form.email || !form.message) {
-      console.error('Invalid contact form data structure')
+      console.error(ERROR_MESSAGES.CONTACT_FORM_INVALID)
       return
     }
 
@@ -346,18 +497,28 @@ export function renderContact() {
 }
 
 /**
- * Render footer section
+ * Render footer section with social links and copyright
+ * 
+ * Dynamically renders footer with social media links and copyright text
+ * from siteData.footer.
+ * 
+ * @function renderFooter
+ * @returns {void}
+ * 
+ * @example
+ * // Call after DOM is ready
+ * renderFooter()
  */
 export function renderFooter() {
   try {
-    const footer = document.querySelector('footer')
+    const footer = document.querySelector(SELECTORS.FOOTER)
     if (!footer || !siteData.footer) {
       console.warn('Footer section or data not found')
       return
     }
 
     const { socialLinks, copyright } = siteData.footer
-    const container = footer.querySelector('.container')
+    const container = footer.querySelector(SELECTORS.CONTAINER)
 
     if (!container) {
       console.error('Footer container not found')
@@ -383,7 +544,18 @@ export function renderFooter() {
 }
 
 /**
- * Render all sections
+ * Render all website sections
+ * 
+ * Convenience function that renders all sections in the correct order:
+ * Hero, Experience, Projects, About, Skills, Contact, and Footer.
+ * Also updates the page title from siteData.meta.
+ * 
+ * @function renderAll
+ * @returns {void}
+ * 
+ * @example
+ * // Call after DOM is ready to render entire page
+ * renderAll()
  */
 export function renderAll() {
   try {
@@ -395,7 +567,7 @@ export function renderAll() {
     renderContact()
     renderFooter()
     
-    // Update page title
+    // Update page title from metadata
     if (siteData.meta?.title) {
       document.title = siteData.meta.title
     }

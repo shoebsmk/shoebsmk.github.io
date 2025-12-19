@@ -1,3 +1,14 @@
+/**
+ * Projects Page Styles
+ * 
+ * Styles specific to the projects listing page including:
+ * - Project list layout
+ * - Project card styles
+ * - Project image and content layout
+ * 
+ * @file css/pages/projects.css
+ */
+
 .projects-list {
     display: flex;
     flex-direction: column;

@@ -1,18 +1,70 @@
-/* Glass & Gradient Design System */
+/**
+ * Glass & Gradient Design System
+ * 
+ * Central CSS custom properties (variables) for the entire design system.
+ * All colors, spacing, and design tokens should reference these variables.
+ * 
+ * @file style.css
+ */
 
 :root {
+    /* Primary Brand Colors */
     --primary-color: #6a11cb;
     --secondary-color: #2575fc;
     --accent-color: #ff4b1f;
+    
+    /* Portfolio Theme Colors (Indigo Palette) */
+    --color-indigo-600: #4c51bf;
+    --color-indigo-800: #3730a3;
+    --color-gray-800: #2d3748;
+    
+    /* Text Colors */
     --text-color: #ffffff;
     --text-muted: #e0e0e0;
+    --text-dark: var(--color-gray-800);
+    
+    /* Background */
     --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    /* Glass Morphism */
     --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-bg-light: rgba(255, 255, 255, 0.2);
+    --glass-bg-medium: rgba(255, 255, 255, 0.4);
     --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-border-light: rgba(255, 255, 255, 0.35);
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --glass-shadow-hover: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
     --backdrop-blur: 10px;
+    --backdrop-blur-sm: 4px;
+    --backdrop-blur-lg: 60px;
+    
+    /* Typography */
     --font-main: 'Outfit', sans-serif;
     --font-heading: 'Outfit', sans-serif;
+    
+    /* Spacing */
+    --spacing-section: 100px;
+    --spacing-container: 20px;
+    --spacing-card: 2rem;
+    
+    /* Border Radius */
+    --radius-sm: 10px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    --radius-full: 50px;
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Z-Index Layers */
+    --z-base: 1;
+    --z-dropdown: 1000;
+    --z-sticky: 1001;
+    --z-modal: 1002;
+    --z-tooltip: 9999;
 }
 
 * {
@@ -77,23 +129,12 @@ ul {
     border-color: rgba(255, 255, 255, 0.4);
 }
 
-.btn-glass {
-    display: inline-block;
-    padding: 12px 30px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid var(--glass-border);
-    border-radius: 50px;
-    color: white;
-    font-weight: 600;
-    backdrop-filter: blur(4px);
-    transition: all 0.3s ease;
-}
-
-.btn-glass:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(1.05);
-    color: white;
-}
+/**
+ * Button styles are now handled by Tailwind CSS in src/styles/input.css
+ * This keeps all button variants in one place and avoids duplication.
+ * 
+ * @see src/styles/input.css for .btn-glass, .btn-glass-sm, .btn-glass-lg
+ */
 
 
 /* Sections */

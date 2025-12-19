@@ -1,3 +1,14 @@
+/**
+ * Hero Section Component Styles
+ * 
+ * Styles for the main hero/landing section including:
+ * - Full viewport height layout
+ * - Hero title and subtitle typography
+ * - Gradient text effects
+ * 
+ * @file css/components/hero.css
+ */
+
 .hero {
     height: 100vh;
     display: flex;
