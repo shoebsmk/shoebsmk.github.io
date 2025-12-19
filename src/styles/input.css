@@ -15,8 +15,28 @@
 @layer components {
   /* Glass Card Component */
   .glass-card {
-    @apply bg-white/25 backdrop-blur-lg border border-black/5 rounded-2xl shadow-sm p-8;
+    @apply bg-white/25 backdrop-blur-lg border border-black/5 rounded-2xl shadow-sm p-8 transition-all duration-150;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  }
+  
+  /* Glass Card Hover Effect (for project cards) */
+  a.glass-card:hover {
+    background-color: rgba(20, 65, 138, 0.6);
+    border-color: rgba(20, 65, 138, 0.6);
+  }
+  
+  /* Change all text colors to light on hover */
+  a.glass-card:hover h3,
+  a.glass-card:hover p,
+  a.glass-card:hover [class*="text-"] {
+    color: #faf8f3 !important;
+    opacity: 1 !important;
+  }
+  
+  /* Change SVG fill color on hover */
+  a.glass-card:hover svg,
+  a.glass-card:hover svg path {
+    fill: #faf8f3 !important;
   }
   
   /* Glass Button - Primary Variant */

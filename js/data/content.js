@@ -61,7 +61,7 @@ export const siteData = {
         name: 'SmartChat',
         category: 'Real-time Messenger • AI Integration',
         description: 'Real-time messenger app with chatrooms, user profiles, typing and online indicators, read receipts, media sharing, dark mode, and an AI Assist tab for chatting with multiple contacts using AI.',
-        url: 'https://github.com/shoebsmk',
+        url: 'https://github.com/shoebsmk/Flutter-chat-claude',
         icon: 'fa-comments'
       },
       {

@@ -530,7 +530,7 @@ export function renderFooter() {
         ${Array.isArray(socialLinks) ? socialLinks.map(link => {
           if (!link || !link.url || !link.name) return ''
           return `
-            <a href="${escapeUrl(link.url)}" target="_blank" rel="noopener noreferrer" class="text-2xl text-[#2d3748] hover:text-[#14418A]/90/70 hover:-translate-y-1 transition-all duration-150" aria-label="${escapeHtml(link.name)}">
+            <a href="${escapeUrl(link.url)}" target="_blank" rel="noopener noreferrer" class="text-6xl text-[#2d3748] hover:text-[#14418A]/90/70 hover:-translate-y-1 transition-all duration-150" aria-label="${escapeHtml(link.name)}">
               <i class="${escapeHtml(link.icon || '')}"></i>
             </a>
           `
