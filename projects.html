@@ -5,7 +5,7 @@
     <title>Projects | Shoeb Khan</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Portfolio projects by Shoeb Khan - Software Engineer">
+    <meta name="description" content="Projects by Shoeb Khan - Software Engineer">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,46 +18,25 @@
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar fixed top-0 w-full z-[1000] py-6 transition-all duration-300">
-        <div class="container max-w-7xl mx-auto px-5 flex justify-between items-center">
-            <a class="back-button inline-flex items-center gap-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm md:text-base font-medium transition-all duration-300 hover:bg-white/20 hover:-translate-x-1" href="index.html">
-                <i class="fas fa-arrow-left text-sm"></i> Back
-            </a>
-            <div class="menu-toggle md:hidden cursor-pointer absolute right-5 top-1/2 -translate-y-1/2 z-[1001]" id="mobile-menu">
-                <span class="bar block w-6 h-0.5 my-1.5 transition-all duration-300 bg-white"></span>
-                <span class="bar block w-6 h-0.5 my-1.5 transition-all duration-300 bg-white"></span>
-                <span class="bar block w-6 h-0.5 my-1.5 transition-all duration-300 bg-white"></span>
-            </div>
-            <ul class="nav-links hidden md:flex gap-8">
-                <li><a class="nav-link font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full" href="index.html#home">Home</a></li>
-                <li><a class="nav-link font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full" href="index.html#about">About</a></li>
-                <li><a class="nav-link font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full" href="index.html#services">Services</a></li>
-                <li><a class="nav-link font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full" href="index.html#experience">Experience</a></li>
-                <li><a class="nav-link font-medium relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-accent text-accent font-semibold" href="projects.html">Projects</a></li>
-                <li><a class="nav-link font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full" href="index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
     <script type="module" src="/js/main.js"></script>
 
     <!-- Projects Section -->
-    <section id="projects-page" class="pt-32 min-h-[calc(100vh-100px)] py-24">
+    <section id="projects-page" class="pt-20 min-h-screen py-24">
         <div class="container max-w-7xl mx-auto px-5">
-            <h1 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 after:content-[''] after:block after:w-16 after:h-1 after:bg-accent after:mx-auto after:mt-2.5 after:rounded">All Projects</h1>
-            <p class="text-center text-[#e0e0e0] mb-12">
+            <h1 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">All Projects</h1>
+            <p class="text-center text-[#2d3748] mb-12 opacity-75">
                 A collection of my work spanning web applications, mobile apps, and software projects.
             </p>
 
             <div class="flex flex-col gap-10 mt-8">
                 <!-- Project 1 -->
-                <div class="glass-card overflow-hidden ml-5 group">
+                <div class="glass-card overflow-hidden group">
                     <div class="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8 items-center p-4">
-                        <img src="/images/s.mart.jpg?v=1" alt="S. Mart" class="w-full h-56 md:h-[220px] object-cover rounded-xl transition-transform duration-200 group-hover:scale-105">
+                        <img src="/images/s.mart.jpg?v=1" alt="S. Mart" class="w-full h-56 md:h-[220px] object-cover rounded-xl">
                         <div class="p-6 md:p-8">
-                            <h3 class="text-3xl md:text-4xl mb-2 font-bold">S. Mart</h3>
-                            <p class="text-accent text-sm md:text-base font-semibold mb-4">Spring Java • Enterprise Web Application</p>
-                            <p class="text-[#e0e0e0] leading-relaxed mb-2">Enterprise web application providing unique shopping experience developed using Spring Java framework. Features include product catalog, shopping cart, user authentication, and order management.</p>
+                            <h3 class="text-3xl md:text-4xl mb-2 font-bold text-[#2d3748]">S. Mart</h3>
+                            <p class="text-[#4c51bf] text-sm md:text-base font-semibold mb-4">Spring Java • Enterprise Web Application</p>
+                            <p class="text-[#2d3748] opacity-90 leading-relaxed mb-2">Enterprise e-commerce platform built with Spring Java, offering seamless shopping with product catalogs, secure checkout, and order tracking.</p>
                             <a href="https://github.com/shoebsmk/group2" target="_blank" class="btn-glass-sm mt-4">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
@@ -66,13 +45,13 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="glass-card overflow-hidden ml-5 group">
+                <div class="glass-card overflow-hidden group">
                     <div class="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8 items-center p-4">
-                        <img src="/images/loop.jpeg?v=1" alt="Walking Tour" class="w-full h-56 md:h-[220px] object-cover rounded-xl transition-transform duration-200 group-hover:scale-105">
+                        <img src="/images/loop.jpeg?v=1" alt="Walking Tour" class="w-full h-56 md:h-[220px] object-cover rounded-xl">
                         <div class="p-6 md:p-8">
-                            <h3 class="text-3xl md:text-4xl mb-2 font-bold">Walking Tour – Chicago Loop</h3>
-                            <p class="text-accent text-sm md:text-base font-semibold mb-4">Android • Mobile Application</p>
-                            <p class="text-[#e0e0e0] leading-relaxed mb-2">A mobile app providing a guided tour of the most famous constructions of the Loop, Chicago. Features GPS navigation, historical information, and interactive maps highlighting iconic architecture.</p>
+                            <h3 class="text-3xl md:text-4xl mb-2 font-bold text-[#2d3748]">Walking Tour – Chicago Loop</h3>
+                            <p class="text-[#4c51bf] text-sm md:text-base font-semibold mb-4">Android • Mobile Application</p>
+                            <p class="text-[#2d3748] opacity-90 leading-relaxed mb-2">Mobile guide app that transforms your phone into a personal tour guide through Chicago's iconic Loop architecture with GPS navigation and historical insights.</p>
                             <a href="https://github.com/shoebsmk/Tours2" target="_blank" class="btn-glass-sm mt-4">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
@@ -81,13 +60,13 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="glass-card overflow-hidden ml-5 group">
+                <div class="glass-card overflow-hidden group">
                     <div class="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8 items-center p-4">
-                        <img src="/images/spaceinvaders.jpg?v=1" alt="Space Invaders" class="w-full h-56 md:h-[220px] object-cover rounded-xl transition-transform duration-200 group-hover:scale-105">
+                        <img src="/images/spaceinvaders.jpg?v=1" alt="Space Invaders" class="w-full h-56 md:h-[220px] object-cover rounded-xl">
                         <div class="p-6 md:p-8">
-                            <h3 class="text-3xl md:text-4xl mb-2 font-bold">Space Invaders</h3>
-                            <p class="text-accent text-sm md:text-base font-semibold mb-4">C# • Game Development</p>
-                            <p class="text-[#e0e0e0] leading-relaxed mb-2">An arcade game made from scratch using C# and best software architecture practices. Implements classic gameplay mechanics, collision detection, scoring system, and progressive difficulty levels.</p>
+                            <h3 class="text-3xl md:text-4xl mb-2 font-bold text-[#2d3748]">Space Invaders</h3>
+                            <p class="text-[#4c51bf] text-sm md:text-base font-semibold mb-4">C# • Game Development</p>
+                            <p class="text-[#2d3748] opacity-90 leading-relaxed mb-2">Classic arcade game recreated from scratch using C# with smooth gameplay, progressive difficulty, and nostalgic retro vibes.</p>
                             <a href="https://github.com/shoebsmk/SpaceInvaders" target="_blank" class="btn-glass-sm mt-4">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
@@ -99,14 +78,11 @@
                 <div class="glass-card project-list-item">
                     <div class="project-list-content">
                         <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80"
-                            alt="CTA Bus Tracker"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl transition-transform duration-200 group-hover:scale-105">
+                            alt="CTA Bus Tracker"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl">
                         <div class="p-6 md:p-8">
-                            <h3 class="text-3xl md:text-4xl mb-2 font-bold">CTA Bus Tracker</h3>
-                            <p class="text-accent text-sm md:text-base font-semibold mb-4">Android • Kotlin • Jetpack</p>
-                            <p>Developed an app displaying information about CTA bus routes, stops, and arrival
-                                predictions at any selected stop for buses within a selected range of the user. Features
-                                include favorite routes with schedule change alerts, cached API calls, night mode, and
-                                Jetpack library implementation.</p>
+                            <h3 class="text-3xl md:text-4xl mb-2 font-bold text-[#2d3748]">CTA Bus Tracker</h3>
+                            <p class="text-[#4c51bf] text-sm md:text-base font-semibold mb-4">Android • Kotlin • Jetpack</p>
+                            <p class="text-[#2d3748] opacity-90">Real-time transit companion that shows bus locations, arrival times, and favorite routes with smart alerts and offline support.</p>
                             <a href="https://github.com/shoebsmk/CTABusTracker" target="_blank" class="btn-glass btn-sm u-mt-16">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
@@ -118,14 +94,11 @@
                 <div class="glass-card project-list-item">
                     <div class="project-list-content">
                         <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80"
-                            alt="News App"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl transition-transform duration-200 group-hover:scale-105">
+                            alt="News App"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl">
                         <div class="p-6 md:p-8">
-                            <h3 class="text-3xl md:text-4xl mb-2 font-bold">News App</h3>
-                            <p class="text-accent text-sm md:text-base font-semibold mb-4">Android • MediaPlayer API • ViewPager2</p>
-                            <p>Displays current news articles from various sources covering multiple categories.
-                                Features content filter with data-driven views including dynamic menus, ViewPager2, and
-                                Drawer layout. Color-coded news categories with rotation-safe content using bundles and
-                                MediaPlayer API for video/photo integration.</p>
+                            <h3 class="text-3xl md:text-4xl mb-2 font-bold text-[#2d3748]">News App</h3>
+                            <p class="text-[#4c51bf] text-sm md:text-base font-semibold mb-4">Android • MediaPlayer API • ViewPager2</p>
+                            <p class="text-[#2d3748] opacity-90">Personalized news aggregator that curates articles from multiple sources with category filters, video integration, and a sleek interface.</p>
                             <a href="https://github.com/shoebsmk/News" target="_blank" class="btn-glass btn-sm u-mt-16">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
@@ -137,14 +110,11 @@
                 <div class="glass-card project-list-item">
                     <div class="project-list-content">
                         <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80"
-                            alt="Stock Watch"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl transition-transform duration-200 group-hover:scale-105">
+                            alt="Stock Watch"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl">
                         <div class="p-6 md:p-8">
-                            <h3 class="text-3xl md:text-4xl mb-2 font-bold">Stock Watch</h3>
-                            <p class="text-accent text-sm md:text-base font-semibold mb-4">Android • RESTful API • RecyclerView</p>
-                            <p>Designed an app displaying a sorted list of selected stocks with live prices and
-                                dynamically changing UI based on stock values. Implemented offline caching, parsed
-                                multiple inter-related RESTful API calls, and added pull-down refresh feature for
-                                real-time updates.</p>
+                            <h3 class="text-3xl md:text-4xl mb-2 font-bold text-[#2d3748]">Stock Watch</h3>
+                            <p class="text-[#4c51bf] text-sm md:text-base font-semibold mb-4">Android • RESTful API • RecyclerView</p>
+                            <p class="text-[#2d3748] opacity-90">Live stock market tracker that displays real-time prices, dynamic UI updates, and offline caching for your favorite stocks.</p>
                             <a href="https://github.com/shoebsmk/Stock-Watch" target="_blank" class="btn-glass btn-sm u-mt-16">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
@@ -156,14 +126,11 @@
                 <div class="glass-card project-list-item">
                     <div class="project-list-content">
                         <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0' stop-color='%23667eea'/><stop offset='1' stop-color='%23764ba2'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><g fill='white'><rect x='200' y='420' width='400' height='40'/><rect x='230' y='380' width='340' height='40'/><rect x='260' y='340' width='280' height='40'/><rect x='290' y='300' width='220' height='40'/><circle cx='400' cy='240' r='80'/><rect x='380' y='160' width='40' height='80'/></g></svg>"
-                            alt="Civil Advocacy"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl transition-transform duration-200 group-hover:scale-105">
+                            alt="Civil Advocacy"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl">
                         <div class="p-6 md:p-8">
-                            <h3 class="text-3xl md:text-4xl mb-2 font-bold">Civil Advocacy</h3>
-                            <p class="text-accent text-sm md:text-base font-semibold mb-4">Android • Google Civic Information API</p>
-                            <p>Developed an app displaying an interactive list of government officials representing
-                                current or specified locations using Google Civic Information API. Features multiple
-                                activities for searching and interacting with politician details including photos and
-                                social handles via implied intents.</p>
+                            <h3 class="text-3xl md:text-4xl mb-2 font-bold text-[#2d3748]">Civil Advocacy</h3>
+                            <p class="text-[#4c51bf] text-sm md:text-base font-semibold mb-4">Android • Google Civic Information API</p>
+                            <p class="text-[#2d3748] opacity-90">Civic engagement app that connects you with local government officials and representatives based on your location.</p>
                             <a href="https://github.com/shoebsmk/Civil_Advocacy" target="_blank" class="btn-glass btn-sm u-mt-16">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
@@ -175,14 +142,11 @@
                 <div class="glass-card project-list-item">
                     <div class="project-list-content">
                         <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80"
-                            alt="Scrumdinger"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl transition-transform duration-200 group-hover:scale-105">
+                            alt="Scrumdinger"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl">
                         <div class="p-6 md:p-8">
-                            <h3 class="text-3xl md:text-4xl mb-2 font-bold">Scrumdinger</h3>
-                            <p class="text-accent text-sm md:text-base font-semibold mb-4">iOS • Swift • SwiftUI</p>
-                            <p>Developed a user-friendly interface for managing daily scrums with summary lists,
-                                detailed views, and meeting timers. Implemented advanced SwiftUI features including
-                                declarative syntax, compositional API, and automatic view updates based on app data
-                                changes.</p>
+                            <h3 class="text-3xl md:text-4xl mb-2 font-bold text-[#2d3748]">Scrumdinger</h3>
+                            <p class="text-[#4c51bf] text-sm md:text-base font-semibold mb-4">iOS • Swift • SwiftUI</p>
+                            <p class="text-[#2d3748] opacity-90">Daily scrum management tool for iOS that helps teams track meetings, timers, and progress with an intuitive SwiftUI interface.</p>
                             <a href="https://github.com/shoebsmk" target="_blank" class="btn-glass btn-sm u-mt-16">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
@@ -194,13 +158,11 @@
                 <div class="glass-card project-list-item">
                     <div class="project-list-content">
                         <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%230b1026'/><g fill='white' opacity='0.9'><circle cx='80' cy='90' r='2'/><circle cx='160' cy='200' r='2'/><circle cx='300' cy='120' r='2'/><circle cx='500' cy='80' r='2'/><circle cx='700' cy='140' r='2'/><circle cx='620' cy='260' r='2'/><circle cx='420' cy='220' r='2'/><circle cx='250' cy='300' r='2'/><circle cx='120' cy='380' r='2'/><circle cx='750' cy='360' r='2'/></g><g><rect x='380' y='420' width='40' height='60' fill='white'/><polygon points='360,420 440,420 400,380' fill='white'/><rect x='390' y='400' width='20' height='20' fill='%23ff4b1f'/><rect x='372' y='440' width='56' height='12' fill='white'/></g><g fill='%23ff4b1f'><rect x='395' y='350' width='10' height='20'/><rect x='395' y='320' width='10' height='20'/><rect x='395' y='290' width='10' height='20'/></g></svg>"
-                            alt="Space Shooter"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl transition-transform duration-200 group-hover:scale-105">
+                            alt="Space Shooter"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl">
                         <div class="p-6 md:p-8">
-                            <h3 class="text-3xl md:text-4xl mb-2 font-bold">Space Shooter</h3>
-                            <p class="text-accent text-sm md:text-base font-semibold mb-4">Unity2D • C# • Game Development</p>
-                            <p>Developed a captivating Space Shooter game using C# and Unity2D. Features engaging
-                                gameplay mechanics including animations, power-ups, and enemy AI. Created visually
-                                appealing game assets with diverse challenging levels and immersive sound design.</p>
+                            <h3 class="text-3xl md:text-4xl mb-2 font-bold text-[#2d3748]">Space Shooter</h3>
+                            <p class="text-[#4c51bf] text-sm md:text-base font-semibold mb-4">Unity2D • C# • Game Development</p>
+                            <p class="text-[#2d3748] opacity-90">Action-packed Unity2D game featuring smooth animations, power-ups, challenging levels, and immersive gameplay.</p>
                             <a href="https://github.com/shoebsmk" target="_blank" class="btn-glass btn-sm u-mt-16">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
@@ -212,14 +174,11 @@
                 <div class="glass-card project-list-item">
                     <div class="project-list-content">
                         <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23667eea'/><stop offset='1' stop-color='%23764ba2'/></linearGradient><marker id='arrow' markerWidth='10' markerHeight='10' refX='5' refY='5' orient='auto'><path d='M0,0 L10,5 L0,10 Z' fill='%23ff4b1f'/></marker></defs><rect width='800' height='600' fill='url(%23bg)'/><g stroke='white' stroke-width='2' fill='%23ffffff' opacity='0.15'><rect x='120' y='120' width='180' height='100' rx='12'/><rect x='500' y='120' width='180' height='100' rx='12'/><rect x='120' y='360' width='180' height='100' rx='12'/><rect x='500' y='360' width='180' height='100' rx='12'/></g><g stroke='%23ff4b1f' stroke-width='3' fill='none'><line x1='300' y1='170' x2='500' y2='170' marker-end='url(%23arrow)'/><line x1='210' y1='220' x2='210' y2='360' marker-end='url(%23arrow)'/><line x1='590' y1='220' x2='590' y2='360' marker-end='url(%23arrow)'/><line x1='300' y1='410' x2='500' y2='410' marker-end='url(%23arrow)'/></g><g fill='white' opacity='0.8'><rect x='150' y='150' width='24' height='24' rx='4'/><rect x='180' y='150' width='24' height='24' rx='4'/><rect x='210' y='150' width='24' height='24' rx='4'/><rect x='530' y='150' width='24' height='24' rx='4'/><rect x='560' y='150' width='24' height='24' rx='4'/><rect x='590' y='150' width='24' height='24' rx='4'/><rect x='150' y='390' width='24' height='24' rx='4'/><rect x='180' y='390' width='24' height='24' rx='4'/><rect x='210' y='390' width='24' height='24' rx='4'/><rect x='530' y='390' width='24' height='24' rx='4'/><rect x='560' y='390' width='24' height='24' rx='4'/><rect x='590' y='390' width='24' height='24' rx='4'/></g></svg>"
-                            alt="Design Patterns for Game Development"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl transition-transform duration-200 group-hover:scale-105">
+                            alt="Design Patterns for Game Development"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl">
                         <div class="p-6 md:p-8">
-                            <h3 class="text-3xl md:text-4xl mb-2 font-bold">Design Patterns for Game Development</h3>
-                            <p class="text-accent text-sm md:text-base font-semibold mb-4">Research Project • MVC • Observer Pattern</p>
-                            <p>Implemented combined MVC, Observer, and State patterns to create highly scalable
-                                real-time applications. Established a robust codebase with improved readability and
-                                maintainability, reducing long-term development and maintenance costs while
-                                accommodating increased user loads and data complexity.</p>
+                            <h3 class="text-3xl md:text-4xl mb-2 font-bold text-[#2d3748]">Design Patterns for Game Development</h3>
+                            <p class="text-[#4c51bf] text-sm md:text-base font-semibold mb-4">Research Project • MVC • Observer Pattern</p>
+                            <p class="text-[#2d3748] opacity-90">Research project exploring scalable game architecture using MVC, Observer, and State patterns for maintainable codebases.</p>
                             <a href="https://github.com/shoebsmk" target="_blank" class="btn-glass-sm mt-4">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
@@ -231,14 +190,11 @@
                 <div class="glass-card project-list-item">
                     <div class="project-list-content">
                         <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
-                            alt="Real-time Game Engine"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl transition-transform duration-200 group-hover:scale-105">
+                            alt="Real-time Game Engine"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl">
                         <div class="p-6 md:p-8">
-                            <h3 class="text-3xl md:text-4xl mb-2 font-bold">Real-time Game Engine</h3>
-                            <p class="text-accent text-sm md:text-base font-semibold mb-4">C++ • DirectX 11 • Game Engine</p>
-                            <p>Developed a real-time game engine from scratch with expertise in runtime library
-                                construction and custom data containers. Implemented multi-heap memory management with
-                                aligned allocations, runtime control through data-driven messaging, and integrated
-                                multiple user-developed libraries. Demo available on YouTube.</p>
+                            <h3 class="text-3xl md:text-4xl mb-2 font-bold text-[#2d3748]">Real-time Game Engine</h3>
+                            <p class="text-[#4c51bf] text-sm md:text-base font-semibold mb-4">C++ • DirectX 11 • Game Engine</p>
+                            <p class="text-[#2d3748] opacity-90">Custom-built C++ game engine with DirectX 11 integration, featuring advanced memory management and flexible runtime systems.</p>
                             <a href="https://github.com/shoebsmk" target="_blank" class="btn-glass-sm mt-4">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
@@ -250,14 +206,11 @@
                 <div class="glass-card project-list-item">
                     <div class="project-list-content">
                         <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23667eea'/><stop offset='1' stop-color='%23764ba2'/></linearGradient><marker id='arrow' markerWidth='12' markerHeight='12' refX='6' refY='6' orient='auto'><path d='M0,0 L12,6 L0,12 Z' fill='%23ff4b1f'/></marker></defs><rect width='800' height='600' fill='url(%23bg)'/><text x='120' y='140' fill='white' font-size='48' font-weight='700'>C++</text><g opacity='0.85' fill='white'><circle cx='120' cy='240' r='3'/><circle cx='180' cy='260' r='3'/><circle cx='240' cy='220' r='3'/><circle cx='300' cy='250' r='3'/><circle cx='360' cy='230' r='3'/><circle cx='420' cy='260' r='3'/><circle cx='480' cy='240' r='3'/><circle cx='540' cy='220' r='3'/><circle cx='600' cy='250' r='3'/><circle cx='660' cy='230' r='3'/><circle cx='720' cy='260' r='3'/></g><g fill='white'><rect x='140' y='420' width='520' height='18' rx='9' opacity='0.35'/><rect x='140' y='450' width='520' height='18' rx='9' opacity='0.35'/><rect x='140' y='480' width='520' height='18' rx='9' opacity='0.35'/><rect x='140' y='510' width='520' height='18' rx='9' opacity='0.35'/><rect x='160' y='420' width='24' height='18' fill='%23ffffff'/><rect x='200' y='420' width='24' height='18' fill='%23ffffff'/><rect x='240' y='420' width='24' height='18' fill='%23ffffff'/><rect x='160' y='450' width='24' height='18' fill='%23ffffff'/><rect x='200' y='450' width='24' height='18' fill='%23ffffff'/><rect x='240' y='450' width='24' height='18' fill='%23ffffff'/><rect x='160' y='480' width='24' height='18' fill='%23ffffff'/><rect x='200' y='480' width='24' height='18' fill='%23ffffff'/><rect x='240' y='480' width='24' height='18' fill='%23ffffff'/><rect x='160' y='510' width='24' height='18' fill='%23ffffff'/><rect x='200' y='510' width='24' height='18' fill='%23ffffff'/><rect x='240' y='510' width='24' height='18' fill='%23ffffff'/></g><polyline points='140,500 220,470 300,440 380,410 480,380 600,350' fill='none' stroke='%23ff4b1f' stroke-width='6' marker-end='url(%23arrow)'/></svg>"
-                            alt="Particle System Optimization"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl transition-transform duration-200 group-hover:scale-105">
+                            alt="Particle System Optimization"                             class="w-full h-56 md:h-[220px] object-cover rounded-xl">
                         <div class="p-6 md:p-8">
-                            <h3 class="text-3xl md:text-4xl mb-2 font-bold">Particle System Optimization</h3>
-                            <p class="text-accent text-sm md:text-base font-semibold mb-4">C++ • SIMD • Performance Optimization</p>
-                            <p>Improved performance and resource usage with advanced analysis and implementation
-                                techniques. Leveraged SIMD instruction set for enhanced parallel processing, optimized
-                                dynamic memory usage, applied caching techniques, and utilized advanced algorithms
-                                combining Merge and Quick sort.</p>
+                            <h3 class="text-3xl md:text-4xl mb-2 font-bold text-[#2d3748]">Particle System Optimization</h3>
+                            <p class="text-[#4c51bf] text-sm md:text-base font-semibold mb-4">C++ • SIMD • Performance Optimization</p>
+                            <p class="text-[#2d3748] opacity-90">High-performance C++ optimization project using SIMD instructions and advanced algorithms to boost rendering efficiency.</p>
                             <a href="https://github.com/shoebsmk" target="_blank" class="btn-glass-sm mt-4">
                                 <i class="fab fa-github"></i> View on GitHub
                             </a>
@@ -267,20 +220,24 @@
 
             </div>
 
-        </div>
+            <!-- Back Button -->
+            <div class="text-center mt-12">
+                <a href="index.html" class="btn-glass-lg">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                </a>
+            </div>
+
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 text-center bg-black/20 backdrop-blur-sm">
+    <footer class="py-8 text-center bg-white/40 backdrop-blur-sm border-t border-black/5">
         <div class="container max-w-7xl mx-auto px-5">
             <div class="social-icons flex justify-center gap-6 mt-4">
-                <!-- <a href="https://www.instagram.com/shoeb_mk_" target="_blank" class="text-2xl text-white hover:text-accent hover:-translate-y-1 transition-all"><i class="fab fa-instagram"></i></a> -->
-                <!-- <a href="https://www.x.com/shoebsmk" target="_blank" class="text-2xl text-white hover:text-accent hover:-translate-y-1 transition-all"><i class="fab fa-twitter"></i></a> -->
-                <a href="https://www.linkedin.com/in/shoebsmk/" target="_blank" class="text-2xl text-white hover:text-accent hover:-translate-y-1 transition-all"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/shoebsmk/" target="_blank" class="text-2xl text-white hover:text-accent hover:-translate-y-1 transition-all"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/shoebsmk/" target="_blank" class="text-2xl text-[#2d3748] hover:text-[#4c51bf] hover:-translate-y-1 transition-all duration-150"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/shoebsmk/" target="_blank" class="text-2xl text-[#2d3748] hover:text-[#4c51bf] hover:-translate-y-1 transition-all duration-150"><i class="fab fa-github"></i></a>
             </div>
-            <p class="mt-4 text-[#e0e0e0]">&copy; 2025 Shoeb Khan. All Rights Reserved.</p>
+            <p class="mt-4 text-[#2d3748] opacity-75">&copy; 2025 Shoeb Khan. All Rights Reserved.</p>
         </div>
     </footer>
 

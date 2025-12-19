@@ -5,15 +5,11 @@ let mouse = { x: 0, y: 0 }
 let target = { x: 0, y: 0 }
 
 export function initThreeScene() {
-  const heroSection = document.querySelector('#home')
-  if (!heroSection) return
-
   // Create container for Three.js canvas
   const canvasContainer = document.createElement('div')
   canvasContainer.id = 'three-canvas-container'
-  canvasContainer.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none;'
-  heroSection.style.position = 'relative'
-  heroSection.appendChild(canvasContainer)
+  canvasContainer.style.cssText = 'position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;'
+  document.body.appendChild(canvasContainer)
 
   // Scene setup
   scene = new THREE.Scene()

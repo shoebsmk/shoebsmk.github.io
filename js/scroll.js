@@ -8,7 +8,7 @@ export function initScroll() {
       e.preventDefault()
       const target = document.querySelector(href)
       if (target) {
-        const offset = 80 // Account for navbar
+        const offset = 0 // No navbar offset needed
         const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset
         
         // Use smooth scroll with custom easing for seamless feel

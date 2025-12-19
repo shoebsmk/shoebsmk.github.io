@@ -17,86 +17,14 @@
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar fixed top-0 w-full z-[1000] py-6 transition-all duration-300">
-        <div class="container max-w-7xl mx-auto px-5 flex justify-between items-center">
-            <a class="navbar-brand text-3xl font-extrabold tracking-wide text-[#2d3748]" href="#">Shoeb.</a>
-            <div class="menu-toggle md:hidden cursor-pointer absolute right-5 top-1/2 -translate-y-1/2 z-[1001]" id="mobile-menu">
-                <span class="bar block w-6 h-0.5 my-1.5 transition-all duration-150 bg-[#2d3748]"></span>
-                <span class="bar block w-6 h-0.5 my-1.5 transition-all duration-150 bg-[#2d3748]"></span>
-                <span class="bar block w-6 h-0.5 my-1.5 transition-all duration-150 bg-[#2d3748]"></span>
-            </div>
-            <ul class="nav-links hidden md:flex gap-8">
-                <li><a class="nav-link font-medium relative text-[#2d3748] after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-[#4c51bf] after:transition-all after:duration-150 hover:after:w-full" href="#home">Home</a></li>
-                <li><a class="nav-link font-medium relative text-[#2d3748] after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-[#4c51bf] after:transition-all after:duration-150 hover:after:w-full" href="#about">About</a></li>
-                <li><a class="nav-link font-medium relative text-[#2d3748] after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-[#4c51bf] after:transition-all after:duration-150 hover:after:w-full" href="#services">Services</a></li>
-                <li><a class="nav-link font-medium relative text-[#2d3748] after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-[#4c51bf] after:transition-all after:duration-150 hover:after:w-full" href="#experience">Experience</a></li>
-                <li><a class="nav-link font-medium relative text-[#2d3748] after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-[#4c51bf] after:transition-all after:duration-150 hover:after:w-full" href="#portfolio">Portfolio</a></li>
-                <li><a class="nav-link font-medium relative text-[#2d3748] after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-[-5px] after:left-0 after:bg-[#4c51bf] after:transition-all after:duration-150 hover:after:w-full" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
-    <section id="home" class="hero min-h-screen flex items-center justify-center text-center relative pt-20 overflow-hidden">
+    <section id="home" class="hero min-h-screen flex items-center justify-center text-center relative overflow-hidden">
         <div class="container max-w-7xl mx-auto px-5 relative z-20">
-            <h1 class="text-6xl md:text-7xl mb-4 bg-gradient-to-r from-[#4c51bf] to-[#3730a3] bg-clip-text text-transparent">Hi, I am Shoeb Khan</h1>
-            <p class="text-2xl text-[#2d3748] mb-8 opacity-75">Software Engineer | Full Stack Developer | Mobile Architect</p>
+            <h1 class="text-8xl md:text-9xl mb-4 bg-gradient-to-r from-[#4c51bf] to-[#3730a3] bg-clip-text text-transparent">Shoeb Khan</h1>
+            <p class="text-3xl text-[#2d3748] mb-8 opacity-75">Software Engineer | Mobile App Architect</p>
             <div class="flex flex-wrap gap-4 justify-center relative z-10">
                 <a href="#experience" class="btn-glass relative z-10">My Work</a>
-                <a href="#contact" class="btn-glass relative z-10">Contact Me</a>
-            </div>
-            <div class="mt-6 relative z-10">
-                <a href="projects.html" class="btn-glass-lg relative z-10">
-                    My Projects <i class="fas fa-arrow-right ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-24">
-        <div class="container max-w-7xl mx-auto px-5">
-            <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">About Me</h2>
-            <div class="glass-card grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-16 items-center">
-                <div>
-                    <img src="/images/linkedinprofilepic.jpeg" alt="Shoeb Khan" class="w-full rounded-3xl border-4 border-white/20 shadow-xl">
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold mb-4 text-[#2d3748]">I am a Software Engineer.</h3>
-                    <p class="mb-4 text-[#2d3748] opacity-90">I'm a software developer with five years of experience creating modern, intuitive mobile and web experiences.</p>
-                    <p class="mb-8 text-[#2d3748] opacity-90">I focus on building robust mobile architectures, streamlining CI/CD pipelines on AWS, and delivering fast, high-performance user experiences end to end.</p>
-                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <li class="bg-white/60 p-4 rounded-xl border border-black/5 flex items-center gap-2.5 text-sm text-[#2d3748]"><i class="fas fa-briefcase text-[#4c51bf] text-lg"></i> 5 Years Experience</li>
-                        <li class="bg-white/60 p-4 rounded-xl border border-black/5 flex items-center gap-2.5 text-sm text-[#2d3748]"><i class="fas fa-graduation-cap text-[#4c51bf] text-lg"></i> Master's from DePaul University</li>
-                        <li class="bg-white/60 p-4 rounded-xl border border-black/5 flex items-center gap-2.5 text-sm text-[#2d3748]"><i class="fas fa-map-marker-alt text-[#4c51bf] text-lg"></i> Chicago, IL</li>
-                        <li class="bg-white/60 p-4 rounded-xl border border-black/5 flex items-center gap-2.5 text-sm md:col-span-2 break-all text-[#2d3748]"><i class="fas fa-envelope text-[#4c51bf] text-lg"></i> shoebwm@gmail.com</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-24">
-        <div class="container max-w-7xl mx-auto px-5">
-            <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass-card text-center">
-                    <div class="text-5xl mb-6 text-[#4c51bf] bg-white/80 w-20 h-20 flex items-center justify-center rounded-full mx-auto"><i class="fas fa-layer-group"></i></div>
-                    <h3 class="text-xl font-bold mb-4 text-[#2d3748]">Full Stack Dev</h3>
-                    <p class="text-[#2d3748] opacity-90">Building custom full-stack web applications using MERN, LAMP, .Net, or Spring Java stacks tailored to your business needs.</p>
-                </div>
-                <div class="glass-card text-center">
-                    <div class="text-5xl mb-6 text-[#4c51bf] bg-white/80 w-20 h-20 flex items-center justify-center rounded-full mx-auto"><i class="fas fa-mobile-alt"></i></div>
-                    <h3 class="text-xl font-bold mb-4 text-[#2d3748]">Mobile Apps</h3>
-                    <p class="text-[#2d3748] opacity-90">High-quality Android (Java/Kotlin) and iOS (Swift/Obj-C) applications with seamless and platform-specific experiences.</p>
-                </div>
-                <div class="glass-card text-center">
-                    <div class="text-5xl mb-6 text-[#4c51bf] bg-white/80 w-20 h-20 flex items-center justify-center rounded-full mx-auto"><i class="fas fa-cloud"></i></div>
-                    <h3 class="text-xl font-bold mb-4 text-[#2d3748]">Cloud & DevOps</h3>
-                    <p class="text-[#2d3748] opacity-90">Designing scalable infrastructure on AWS/Azure and orchestrating pipelines using Docker, Kubernetes, and CI/CD tools.</p>
-                </div>
+                <a href="/resume.pdf" download class="btn-glass relative z-10">Download Resume</a>
             </div>
         </div>
     </section>
@@ -106,61 +34,320 @@
         <div class="container max-w-7xl mx-auto px-5">
             <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">Work Experience</h2>
             <div class="timeline max-w-4xl mx-auto relative">
-                <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative before:content-[''] before:absolute before:-left-[9px] before:top-0 before:w-4 before:h-4 before:bg-[#4c51bf] before:rounded-full before:shadow-[0_0_10px] before:shadow-[#4c51bf]/50">
+                <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative">
                     <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Software Engineer</h3>
                     <h4 class="text-lg mb-4 text-[#2d3748] opacity-75">FNR Solutions, Inc. • Jul 2024 - Present</h4>
-                    <p class="text-[#2d3748] opacity-90">Developed full-stack web applications using React and Python, optimizing interfaces and backend data processing. Implemented AWS infrastructure with Terraform for automated deployments and integrated Okta SSO for enhanced security. Collaborated on CI/CD pipelines using AWS CodePipeline.</p>
+                    <p class="text-[#2d3748] opacity-90">Building full-stack web applications that deliver seamless user experiences, from intuitive interfaces to robust backend systems. Architecting cloud infrastructure with automated deployments and enterprise-grade security, enabling the team to ship faster and scale confidently.</p>
                 </div>
-                <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative before:content-[''] before:absolute before:-left-[9px] before:top-0 before:w-4 before:h-4 before:bg-[#4c51bf] before:rounded-full before:shadow-[0_0_10px] before:shadow-[#4c51bf]/50">
+                <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative">
                     <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Software Engineer (Flutter)</h3>
                     <h4 class="text-lg mb-4 text-[#2d3748] opacity-75">Align Astrology • Jan 2024 - Jul 2024</h4>
-                    <p class="text-[#2d3748] opacity-90">Developed AI-powered feature leveraging GPT for user compatibility prediction. Redesigned horoscope visualization with customized insights, boosting user engagement by 20%. Implemented CI/CD pipelines using AWS CodePipeline and elevated UX with intuitive UI guides.</p>
+                    <p class="text-[#2d3748] opacity-90">Developed AI-powered compatibility features that transform how users discover connections, while redesigning the core experience to be more personalized and engaging—driving a 20% increase in user engagement. Streamlined deployment pipelines to accelerate release cycles and improve product quality.</p>
                 </div>
-                <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative before:content-[''] before:absolute before:-left-[9px] before:top-0 before:w-4 before:h-4 before:bg-[#4c51bf] before:rounded-full before:shadow-[0_0_10px] before:shadow-[#4c51bf]/50">
+                <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative">
                     <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Software Developer</h3>
                     <h4 class="text-lg mb-4 text-[#2d3748] opacity-75">SkyIT Services • Feb 2023 - Jan 2024</h4>
-                    <p class="text-[#2d3748] opacity-90">Enhanced search and filtering systems for Android and iOS applications. Implemented offline caching with Room, reducing load times by 30% and increasing user engagement by 25%. Conducted code reviews and initiated migration from Java to Kotlin with Jetpack Compose.</p>
+                    <p class="text-[#2d3748] opacity-90">Transformed app performance through offline-first architecture, reducing load times by 30% and increasing user engagement by 25%. Spearheaded the migration to modern Android development practices, elevating code quality and team productivity.</p>
                 </div>
-                <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative before:content-[''] before:absolute before:-left-[9px] before:top-0 before:w-4 before:h-4 before:bg-[#4c51bf] before:rounded-full before:shadow-[0_0_10px] before:shadow-[#4c51bf]/50">
+                <div class="glass-card mb-8 pl-8 border-l-2 border-[#4c51bf]/30 relative">
                     <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Mobile Application Developer</h3>
                     <h4 class="text-lg mb-4 text-[#2d3748] opacity-75">Checago Coffee App • Nov 2022 - May 2023</h4>
-                    <p class="text-[#2d3748] opacity-90">Designed order alert system with push notifications using Firebase Cloud Messaging. Streamlined order placement by merging payment gateway phases. Configured MySQL database and AWS cloud services (EC2, S3, EBS) for API integration.</p>
+                    <p class="text-[#2d3748] opacity-90">Engineered real-time notification systems that keep customers connected throughout their journey, while streamlining the checkout experience for frictionless ordering. Designed and deployed scalable cloud infrastructure to support seamless API integrations and reliable service delivery.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Projects Section -->
     <section id="portfolio" class="py-24">
         <div class="container max-w-7xl mx-auto px-5">
-            <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">Portfolio</h2>
+            <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div class="glass-card overflow-hidden relative group">
-                    <img src="/images/s.mart.jpg?v=1" alt="S. Mart" class="w-full h-64 object-cover rounded-xl mb-6 transition-transform duration-200 group-hover:scale-105">
+                    <img src="/images/s.mart.jpg?v=1" alt="S. Mart" class="w-full h-64 object-cover rounded-xl mb-6">
                     <h3 class="text-xl font-bold mb-2 text-[#2d3748]">S. Mart</h3>
-                    <p class="mb-4 text-[#2d3748] opacity-90">Enterprise web application providing unique shopping experience developed using Spring Java.</p>
-                    <a href="https://github.com/shoebsmk/group2" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
+                    <p class="text-[#4c51bf] text-sm font-semibold mb-2">Spring Java • Enterprise Web Application</p>
+                    <p class="mb-4 text-[#2d3748] opacity-90">Enterprise e-commerce platform built with Spring Java, offering seamless shopping with product catalogs, secure checkout, and order tracking.</p>
+                    <a href="https://github.com/shoebsmk/group2" target="_blank" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
                 <!-- Project 2 -->
                 <div class="glass-card overflow-hidden relative group">
-                    <img src="/images/loop.jpeg?v=1" alt="Walking Tour" class="w-full h-64 object-cover rounded-xl mb-6 transition-transform duration-200 group-hover:scale-105">
+                    <img src="/images/loop.jpeg?v=1" alt="Walking Tour" class="w-full h-64 object-cover rounded-xl mb-6">
                     <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Walking Tour – Chicago Loop</h3>
-                    <p class="mb-4 text-[#2d3748] opacity-90">A mobile app providing a guided tour of the most famous constructions of the Loop, Chicago.</p>
-                    <a href="https://github.com/shoebsmk/Tours2" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
+                    <p class="text-[#4c51bf] text-sm font-semibold mb-2">Android • Mobile Application</p>
+                    <p class="mb-4 text-[#2d3748] opacity-90">Mobile guide app that transforms your phone into a personal tour guide through Chicago's iconic Loop architecture with GPS navigation and historical insights.</p>
+                    <a href="https://github.com/shoebsmk/Tours2" target="_blank" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
                 <!-- Project 3 -->
                 <div class="glass-card overflow-hidden relative group">
-                    <img src="/images/spaceinvaders.jpg?v=1" alt="Space Invaders" class="w-full h-64 object-cover rounded-xl mb-6 transition-transform duration-200 group-hover:scale-105">
+                    <img src="/images/spaceinvaders.jpg?v=1" alt="Space Invaders" class="w-full h-64 object-cover rounded-xl mb-6">
                     <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Space Invaders</h3>
-                    <p class="mb-4 text-[#2d3748] opacity-90">An arcade game made from scratch using C# and best software architecture practices.</p>
-                    <a href="https://github.com/shoebsmk/SpaceInvaders" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
+                    <p class="text-[#4c51bf] text-sm font-semibold mb-2">C# • Game Development</p>
+                    <p class="mb-4 text-[#2d3748] opacity-90">Classic arcade game recreated from scratch using C# with smooth gameplay, progressive difficulty, and nostalgic retro vibes.</p>
+                    <a href="https://github.com/shoebsmk/SpaceInvaders" target="_blank" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+                <!-- Project 4 -->
+                <div class="glass-card overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=800&q=80" alt="CTA Bus Tracker" class="w-full h-64 object-cover rounded-xl mb-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">CTA Bus Tracker</h3>
+                    <p class="text-[#4c51bf] text-sm font-semibold mb-2">Android • Kotlin • Jetpack</p>
+                    <p class="mb-4 text-[#2d3748] opacity-90">Real-time transit companion that shows bus locations, arrival times, and favorite routes with smart alerts and offline support.</p>
+                    <a href="https://github.com/shoebsmk/CTABusTracker" target="_blank" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+                <!-- Project 5 -->
+                <div class="glass-card overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80" alt="News App" class="w-full h-64 object-cover rounded-xl mb-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">News App</h3>
+                    <p class="text-[#4c51bf] text-sm font-semibold mb-2">Android • MediaPlayer API • ViewPager2</p>
+                    <p class="mb-4 text-[#2d3748] opacity-90">Personalized news aggregator that curates articles from multiple sources with category filters, video integration, and a sleek interface.</p>
+                    <a href="https://github.com/shoebsmk/News" target="_blank" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+                <!-- Project 6 -->
+                <div class="glass-card overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80" alt="Stock Watch" class="w-full h-64 object-cover rounded-xl mb-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Stock Watch</h3>
+                    <p class="text-[#4c51bf] text-sm font-semibold mb-2">Android • RESTful API • RecyclerView</p>
+                    <p class="mb-4 text-[#2d3748] opacity-90">Live stock market tracker that displays real-time prices, dynamic UI updates, and offline caching for your favorite stocks.</p>
+                    <a href="https://github.com/shoebsmk/Stock-Watch" target="_blank" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+                <!-- Project 7 -->
+                <div class="glass-card overflow-hidden relative group">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearGradient id='g' x1='0' x2='1' y1='0' y2='1'><stop offset='0' stop-color='%23667eea'/><stop offset='1' stop-color='%23764ba2'/></linearGradient></defs><rect width='800' height='600' fill='url(%23g)'/><g fill='white'><rect x='200' y='420' width='400' height='40'/><rect x='230' y='380' width='340' height='40'/><rect x='260' y='340' width='280' height='40'/><rect x='290' y='300' width='220' height='40'/><circle cx='400' cy='240' r='80'/><rect x='380' y='160' width='40' height='80'/></g></svg>" alt="Civil Advocacy" class="w-full h-64 object-cover rounded-xl mb-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Civil Advocacy</h3>
+                    <p class="text-[#4c51bf] text-sm font-semibold mb-2">Android • Google Civic Information API</p>
+                    <p class="mb-4 text-[#2d3748] opacity-90">Civic engagement app that connects you with local government officials and representatives based on your location.</p>
+                    <a href="https://github.com/shoebsmk/Civil_Advocacy" target="_blank" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+                <!-- Project 8 -->
+                <div class="glass-card overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80" alt="Scrumdinger" class="w-full h-64 object-cover rounded-xl mb-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Scrumdinger</h3>
+                    <p class="text-[#4c51bf] text-sm font-semibold mb-2">iOS • Swift • SwiftUI</p>
+                    <p class="mb-4 text-[#2d3748] opacity-90">Daily scrum management tool for iOS that helps teams track meetings, timers, and progress with an intuitive SwiftUI interface.</p>
+                    <a href="https://github.com/shoebsmk" target="_blank" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+                <!-- Project 9 -->
+                <div class="glass-card overflow-hidden relative group">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><rect width='800' height='600' fill='%230b1026'/><g fill='white' opacity='0.9'><circle cx='80' cy='90' r='2'/><circle cx='160' cy='200' r='2'/><circle cx='300' cy='120' r='2'/><circle cx='500' cy='80' r='2'/><circle cx='700' cy='140' r='2'/><circle cx='620' cy='260' r='2'/><circle cx='420' cy='220' r='2'/><circle cx='250' cy='300' r='2'/><circle cx='120' cy='380' r='2'/><circle cx='750' cy='360' r='2'/></g><g><rect x='380' y='420' width='40' height='60' fill='white'/><polygon points='360,420 440,420 400,380' fill='white'/><rect x='390' y='400' width='20' height='20' fill='%23ff4b1f'/><rect x='372' y='440' width='56' height='12' fill='white'/></g><g fill='%23ff4b1f'><rect x='395' y='350' width='10' height='20'/><rect x='395' y='320' width='10' height='20'/><rect x='395' y='290' width='10' height='20'/></g></svg>" alt="Space Shooter" class="w-full h-64 object-cover rounded-xl mb-6 transition-transform duration-200 group-hover:scale-105">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Space Shooter</h3>
+                    <p class="text-[#4c51bf] text-sm font-semibold mb-2">Unity2D • C# • Game Development</p>
+                    <p class="mb-4 text-[#2d3748] opacity-90">Action-packed Unity2D game featuring smooth animations, power-ups, challenging levels, and immersive gameplay.</p>
+                    <a href="https://github.com/shoebsmk" target="_blank" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+                <!-- Project 10 -->
+                <div class="glass-card overflow-hidden relative group">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23667eea'/><stop offset='1' stop-color='%23764ba2'/></linearGradient><marker id='arrow' markerWidth='10' markerHeight='10' refX='5' refY='5' orient='auto'><path d='M0,0 L10,5 L0,10 Z' fill='%23ff4b1f'/></marker></defs><rect width='800' height='600' fill='url(%23bg)'/><g stroke='white' stroke-width='2' fill='%23ffffff' opacity='0.15'><rect x='120' y='120' width='180' height='100' rx='12'/><rect x='500' y='120' width='180' height='100' rx='12'/><rect x='120' y='360' width='180' height='100' rx='12'/><rect x='500' y='360' width='180' height='100' rx='12'/></g><g stroke='%23ff4b1f' stroke-width='3' fill='none'><line x1='300' y1='170' x2='500' y2='170' marker-end='url(%23arrow)'/><line x1='210' y1='220' x2='210' y2='360' marker-end='url(%23arrow)'/><line x1='590' y1='220' x2='590' y2='360' marker-end='url(%23arrow)'/><line x1='300' y1='410' x2='500' y2='410' marker-end='url(%23arrow)'/></g><g fill='white' opacity='0.8'><rect x='150' y='150' width='24' height='24' rx='4'/><rect x='180' y='150' width='24' height='24' rx='4'/><rect x='210' y='150' width='24' height='24' rx='4'/><rect x='530' y='150' width='24' height='24' rx='4'/><rect x='560' y='150' width='24' height='24' rx='4'/><rect x='590' y='150' width='24' height='24' rx='4'/><rect x='150' y='390' width='24' height='24' rx='4'/><rect x='180' y='390' width='24' height='24' rx='4'/><rect x='210' y='390' width='24' height='24' rx='4'/><rect x='530' y='390' width='24' height='24' rx='4'/><rect x='560' y='390' width='24' height='24' rx='4'/><rect x='590' y='390' width='24' height='24' rx='4'/></g></svg>" alt="Design Patterns for Game Development" class="w-full h-64 object-cover rounded-xl mb-6 transition-transform duration-200 group-hover:scale-105">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Design Patterns for Game Development</h3>
+                    <p class="text-[#4c51bf] text-sm font-semibold mb-2">Research Project • MVC • Observer Pattern</p>
+                    <p class="mb-4 text-[#2d3748] opacity-90">Research project exploring scalable game architecture using MVC, Observer, and State patterns for maintainable codebases.</p>
+                    <a href="https://github.com/shoebsmk" target="_blank" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+                <!-- Project 11 -->
+                <div class="glass-card overflow-hidden relative group">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Real-time Game Engine" class="w-full h-64 object-cover rounded-xl mb-6">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Real-time Game Engine</h3>
+                    <p class="text-[#4c51bf] text-sm font-semibold mb-2">C++ • DirectX 11 • Game Engine</p>
+                    <p class="mb-4 text-[#2d3748] opacity-90">Custom-built C++ game engine with DirectX 11 integration, featuring advanced memory management and flexible runtime systems.</p>
+                    <a href="https://github.com/shoebsmk" target="_blank" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
+                </div>
+                <!-- Project 12 -->
+                <div class="glass-card overflow-hidden relative group">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearGradient id='bg' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23667eea'/><stop offset='1' stop-color='%23764ba2'/></linearGradient><marker id='arrow' markerWidth='12' markerHeight='12' refX='6' refY='6' orient='auto'><path d='M0,0 L12,6 L0,12 Z' fill='%23ff4b1f'/></marker></defs><rect width='800' height='600' fill='url(%23bg)'/><text x='120' y='140' fill='white' font-size='48' font-weight='700'>C++</text><g opacity='0.85' fill='white'><circle cx='120' cy='240' r='3'/><circle cx='180' cy='260' r='3'/><circle cx='240' cy='220' r='3'/><circle cx='300' cy='250' r='3'/><circle cx='360' cy='230' r='3'/><circle cx='420' cy='260' r='3'/><circle cx='480' cy='240' r='3'/><circle cx='540' cy='220' r='3'/><circle cx='600' cy='250' r='3'/><circle cx='660' cy='230' r='3'/><circle cx='720' cy='260' r='3'/></g><g fill='white'><rect x='140' y='420' width='520' height='18' rx='9' opacity='0.35'/><rect x='140' y='450' width='520' height='18' rx='9' opacity='0.35'/><rect x='140' y='480' width='520' height='18' rx='9' opacity='0.35'/><rect x='140' y='510' width='520' height='18' rx='9' opacity='0.35'/><rect x='160' y='420' width='24' height='18' fill='%23ffffff'/><rect x='200' y='420' width='24' height='18' fill='%23ffffff'/><rect x='240' y='420' width='24' height='18' fill='%23ffffff'/><rect x='160' y='450' width='24' height='18' fill='%23ffffff'/><rect x='200' y='450' width='24' height='18' fill='%23ffffff'/><rect x='240' y='450' width='24' height='18' fill='%23ffffff'/><rect x='160' y='480' width='24' height='18' fill='%23ffffff'/><rect x='200' y='480' width='24' height='18' fill='%23ffffff'/><rect x='240' y='480' width='24' height='18' fill='%23ffffff'/><rect x='160' y='510' width='24' height='18' fill='%23ffffff'/><rect x='200' y='510' width='24' height='18' fill='%23ffffff'/><rect x='240' y='510' width='24' height='18' fill='%23ffffff'/></g><polyline points='140,500 220,470 300,440 380,410 480,380 600,350' fill='none' stroke='%23ff4b1f' stroke-width='6' marker-end='url(%23arrow)'/></svg>" alt="Particle System Optimization" class="w-full h-64 object-cover rounded-xl mb-6 transition-transform duration-200 group-hover:scale-105">
+                    <h3 class="text-xl font-bold mb-2 text-[#2d3748]">Particle System Optimization</h3>
+                    <p class="text-[#4c51bf] text-sm font-semibold mb-2">C++ • SIMD • Performance Optimization</p>
+                    <p class="mb-4 text-[#2d3748] opacity-90">High-performance C++ optimization project using SIMD instructions and advanced algorithms to boost rendering efficiency.</p>
+                    <a href="https://github.com/shoebsmk" target="_blank" class="btn-glass-sm mt-4"><i class="fab fa-github"></i> View on GitHub</a>
                 </div>
             </div>
-            <div class="text-center mt-12">
-                <a href="projects.html" class="btn-glass-lg">
-                    My Projects <i class="fas fa-arrow-right ml-2"></i>
-                </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24">
+        <div class="container max-w-7xl mx-auto px-5">
+            <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">About Me</h2>
+            <div class="glass-card max-w-5xl mx-auto">
+                <!-- Profile Header -->
+                <div class="text-center mb-10">
+                    <div class="inline-block relative mb-6">
+                        <img src="/images/linkedinprofilepic.jpeg" alt="Shoeb Khan" class="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-white/30 shadow-2xl object-cover mx-auto">
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-3 text-[#2d3748]">I am a Software Engineer</h3>
+                    <p class="text-lg text-[#2d3748] opacity-75 mb-6">Building modern, intuitive mobile and web experiences</p>
+                </div>
+
+                <!-- About Content -->
+                <div class="mb-10 px-4 md:px-8">
+                    <div class="max-w-3xl mx-auto space-y-6">
+                        <p class="text-[#2d3748] opacity-90 leading-relaxed">
+                            Hi, I'm Shoeb Khan—a software engineer and mobile app architect focused on building scalable, high-performance products from idea to production. I specialize in designing clean, maintainable systems that deliver fast, intuitive user experiences across mobile and web.
+                        </p>
+                        <p class="text-[#2d3748] opacity-90 leading-relaxed">
+                            With over five years of experience, I've architected and shipped full-stack applications for startups and enterprises, working across Flutter and native mobile platforms, backend services, and cloud infrastructure on AWS. I'm especially interested in performance-critical systems, product scalability, and developer-friendly architectures.
+                        </p>
+                        <p class="text-[#2d3748] opacity-90 leading-relaxed">
+                            I'm currently building SmartChat, an AI-powered messaging platform that uses natural language understanding to simplify how people communicate across web and mobile.
+                        </p>
+                        <p class="text-[#2d3748] opacity-90 leading-relaxed">
+                            Outside of product work, I explore software fundamentals by building games and system-level projects—including developing a custom game engine from scratch.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Quick Info Cards -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 px-4 md:px-8">
+                    <div class="bg-white/40 p-4 rounded-xl border border-black/5 text-center hover:bg-white/50 transition-all duration-200">
+                        <i class="fas fa-briefcase text-[#4c51bf] text-2xl mb-2"></i>
+                        <p class="text-sm font-semibold text-[#2d3748]">5 Years</p>
+                        <p class="text-xs text-[#2d3748] opacity-75">Experience</p>
+                    </div>
+                    <div class="bg-white/40 p-4 rounded-xl border border-black/5 text-center hover:bg-white/50 transition-all duration-200">
+                        <i class="fas fa-graduation-cap text-[#4c51bf] text-2xl mb-2"></i>
+                        <p class="text-sm font-semibold text-[#2d3748]">Master's</p>
+                        <p class="text-xs text-[#2d3748] opacity-75">DePaul University</p>
+                    </div>
+                    <div class="bg-white/40 p-4 rounded-xl border border-black/5 text-center hover:bg-white/50 transition-all duration-200">
+                        <i class="fas fa-map-marker-alt text-[#4c51bf] text-2xl mb-2"></i>
+                        <p class="text-sm font-semibold text-[#2d3748]">Chicago, IL</p>
+                        <p class="text-xs text-[#2d3748] opacity-75">Location</p>
+                    </div>
+                    <div class="bg-white/40 p-4 rounded-xl border border-black/5 text-center hover:bg-white/50 transition-all duration-200">
+                        <i class="fas fa-envelope text-[#4c51bf] text-2xl mb-2"></i>
+                        <p class="text-sm font-semibold text-[#2d3748] break-all">shoebwm@gmail.com</p>
+                        <p class="text-xs text-[#2d3748] opacity-75">Contact</p>
+                    </div>
+                </div>
+                
+                <!-- Freelance Services -->
+                <div class="pt-8 border-t border-black/10">
+                    <h4 class="text-2xl font-bold mb-6 text-[#2d3748] text-center">Freelance Services</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-8 pb-4">
+                        <div class="bg-white/30 p-6 rounded-xl border border-black/5 hover:bg-white/40 hover:shadow-lg transition-all duration-200 group">
+                            <div class="text-4xl mb-4 text-[#4c51bf] bg-white/50 w-20 h-20 flex items-center justify-center rounded-full mx-auto group-hover:scale-110 transition-transform duration-200">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h5 class="text-lg font-bold mb-3 text-[#2d3748] text-center">Full Stack Dev</h5>
+                            <p class="text-sm text-[#2d3748] opacity-90 text-center leading-relaxed">Building custom full-stack web applications using MERN, LAMP, .Net, or Spring Java stacks tailored to your business needs.</p>
+                        </div>
+                        <div class="bg-white/30 p-6 rounded-xl border border-black/5 hover:bg-white/40 hover:shadow-lg transition-all duration-200 group">
+                            <div class="text-4xl mb-4 text-[#4c51bf] bg-white/50 w-20 h-20 flex items-center justify-center rounded-full mx-auto group-hover:scale-110 transition-transform duration-200">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h5 class="text-lg font-bold mb-3 text-[#2d3748] text-center">Mobile Apps</h5>
+                            <p class="text-sm text-[#2d3748] opacity-90 text-center leading-relaxed">High-quality Android (Java/Kotlin) and iOS (Swift/Obj-C) applications with seamless and platform-specific experiences.</p>
+                        </div>
+                        <div class="bg-white/30 p-6 rounded-xl border border-black/5 hover:bg-white/40 hover:shadow-lg transition-all duration-200 group">
+                            <div class="text-4xl mb-4 text-[#4c51bf] bg-white/50 w-20 h-20 flex items-center justify-center rounded-full mx-auto group-hover:scale-110 transition-transform duration-200">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h5 class="text-lg font-bold mb-3 text-[#2d3748] text-center">Cloud & DevOps</h5>
+                            <p class="text-sm text-[#2d3748] opacity-90 text-center leading-relaxed">Designing scalable infrastructure on AWS/Azure and orchestrating pipelines using Docker, Kubernetes, and CI/CD tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="py-24">
+        <div class="container max-w-7xl mx-auto px-5">
+            <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-5xl mx-auto">
+                <!-- Mobile Development -->
+                <div class="skill-badge" title="Flutter">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="Flutter" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Swift">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg" alt="Swift" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Kotlin">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg" alt="Kotlin" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Android">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg" alt="Android" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Xcode">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/xcode/xcode-original.svg" alt="Xcode" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Unity">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg" alt="Unity" class="w-14 h-14 mx-auto">
+                </div>
+                
+                <!-- Frontend/Web -->
+                <div class="skill-badge" title="React">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="React" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="JavaScript">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="TypeScript">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="TypeScript" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Figma">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="Figma" class="w-14 h-14 mx-auto">
+                </div>
+                
+                <!-- Backend -->
+                <div class="skill-badge" title="Python">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Java">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="Java" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Spring">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg" alt="Spring" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title=".NET">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/dotnetcore/dotnetcore-original.svg" alt=".NET" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="C#">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="C#" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="C++">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="C++" class="w-14 h-14 mx-auto">
+                </div>
+                
+                <!-- Cloud/DevOps -->
+                <div class="skill-badge" title="AWS">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg" alt="AWS" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="GCP">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg" alt="GCP" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Azure">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg" alt="Azure" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Terraform">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg" alt="Terraform" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Docker">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" alt="Docker" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="CI/CD">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/githubactions/githubactions-original.svg" alt="CI/CD" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Linux">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" class="w-14 h-14 mx-auto">
+                </div>
+                
+                <!-- Databases/Tools -->
+                <div class="skill-badge" title="MongoDB">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Firebase">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg" alt="Firebase" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Supabase">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg" alt="Supabase" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="Git">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="Git" class="w-14 h-14 mx-auto">
+                </div>
+                <div class="skill-badge" title="GitHub">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="GitHub" class="w-14 h-14 mx-auto">
+                </div>
             </div>
         </div>
     </section>
@@ -169,15 +356,32 @@
     <section id="contact" class="py-24">
         <div class="container max-w-4xl mx-auto px-5">
             <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#4c51bf] after:mx-auto after:mt-2.5 after:rounded">Contact Me</h2>
-            <div class="glass-card text-center">
-                <p class="text-[#2d3748] opacity-90 mb-4">Open the contact form to get in touch.</p>
-                <a href="contact.html" class="btn-glass-lg">Open Contact Form</a>
+            <div class="glass-card">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block mb-2 font-semibold text-[#2d3748]">Name <span class="text-red-500">*</span></label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-[#2d3748] placeholder:text-[#2d3748]/50 focus:outline-none focus:border-[#4c51bf]/50 transition-colors duration-150" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 font-semibold text-[#2d3748]">Email <span class="text-red-500">*</span></label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-[#2d3748] placeholder:text-[#2d3748]/50 focus:outline-none focus:border-[#4c51bf]/50 transition-colors duration-150" placeholder="your.email@example.com">
+                    </div>
+                    <div>
+                        <label for="message" class="block mb-2 font-semibold text-[#2d3748]">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-white/20 bg-white/10 text-[#2d3748] placeholder:text-[#2d3748]/50 focus:outline-none focus:border-[#4c51bf]/50 transition-colors duration-150 resize-none" placeholder="Tell me more about your inquiry..."></textarea>
+                    </div>
+                    <div id="contactSuccessMessage" class="hidden p-4 rounded-lg bg-green-500/20 border border-green-500/50 text-green-700 text-center"></div>
+                    <div id="contactErrorMessage" class="hidden p-4 rounded-lg bg-red-500/20 border border-red-500/50 text-red-700 text-center"></div>
+                    <div class="flex justify-end">
+                        <button type="submit" class="btn-glass-lg">Send Message</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 text-center bg-white/60 backdrop-blur-sm border-t border-black/5">
+    <footer class="py-8 text-center bg-white/40 backdrop-blur-sm border-t border-black/5">
         <div class="container max-w-7xl mx-auto px-5">
             <div class="social-icons flex justify-center gap-6 mt-4">
                 <!-- <a href="https://www.instagram.com/shoeb_mk_" target="_blank"><i class="fab fa-instagram text-2xl text-[#2d3748] hover:text-[#4c51bf] hover:-translate-y-1 transition-all"></i></a> -->
