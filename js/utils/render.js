@@ -332,7 +332,7 @@ export function renderAbout() {
 
         <!-- About Content -->
         <div class="mb-10 px-4 md:px-8">
-          <div class="max-w-3xl mx-auto space-y-6">
+          <div class="max-w-3xl mx-auto space-y-6 text-center">
             ${Array.isArray(paragraphs) ? paragraphs.map(p => `
               <p class="text-[#2d3748] opacity-90 leading-relaxed">${escapeHtml(p || '')}</p>
             `).join('') : ''}
