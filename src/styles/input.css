@@ -22,19 +22,19 @@
   /* Glass Button - Primary Variant */
   .btn-glass {
     @apply inline-block px-8 py-3 bg-white/40 border border-black/10 rounded-full text-[#2d3748] font-semibold backdrop-blur-sm transition-all duration-150 hover:bg-white/50 hover:scale-105;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
   
   /* Glass Button - Small Variant */
   .btn-glass-sm {
     @apply inline-block px-4 py-2 bg-white/40 border border-black/10 rounded-full text-[#2d3748] text-sm font-semibold backdrop-blur-sm transition-all duration-150 hover:bg-white/50 hover:scale-105;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
   
   /* Glass Button - Large Variant */
   .btn-glass-lg {
     @apply inline-block px-8 py-4 bg-white/40 border border-black/10 rounded-full text-[#2d3748] text-lg font-semibold backdrop-blur-sm transition-all duration-150 hover:bg-white/50 hover:scale-105;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   }
   
   /* Skill Badge Component */
