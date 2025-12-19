@@ -23,7 +23,7 @@ const TRAIL_CONFIG = {
   /** Dot size in pixels */
   DOT_SIZE: 4,
   /** Dot color RGBA values */
-  DOT_COLOR: 'rgba(76, 81, 191, 0.6)',
+  DOT_COLOR: 'rgba(20, 65, 138, 0.6)',
   /** Initial dot opacity */
   DOT_OPACITY: '0.6',
   /** Z-index for trail dots */
