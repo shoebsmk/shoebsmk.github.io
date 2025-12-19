@@ -340,12 +340,12 @@ export function renderAbout() {
         </div>
 
         <!-- Quick Info Cards -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 px-4 md:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mb-10 px-4 md:px-8">
           ${Array.isArray(quickInfo) ? quickInfo.map(info => {
             if (!info || !info.icon) return ''
             const value = info.value || ''
             return `
-              <div class="bg-white/40 p-4 rounded-xl border border-black/5 text-center hover:bg-white/50 transition-all duration-200">
+              <div class="bg-white/40 p-5 rounded-xl border border-black/5 text-center hover:bg-white/50 transition-all duration-200">
                 <i class="fas ${escapeHtml(info.icon)} text-[#14418A]/90 text-2xl mb-2"></i>
                 <p class="text-sm font-semibold text-[#2d3748] ${value.includes('@') ? 'break-all' : ''}">${escapeHtml(value)}</p>
                 <p class="text-xs text-[#2d3748] opacity-75">${escapeHtml(info.label || '')}</p>
