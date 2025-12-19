@@ -19,8 +19,6 @@ import { EMAILJS_CONFIG } from '../config.js'
 const FORM_CONFIG = {
   /** Form element ID */
   FORM_ID: 'contactForm',
-  /** Name input element ID */
-  NAME_INPUT_ID: 'name',
   /** Email input element ID */
   EMAIL_INPUT_ID: 'email',
   /** Message textarea element ID */
@@ -164,12 +162,10 @@ function restoreButton(button, originalText) {
  * @returns {Object<string, string>} Form field values
  */
 function getFormValues() {
-  const nameInput = document.getElementById(FORM_CONFIG.NAME_INPUT_ID)
   const emailInput = document.getElementById(FORM_CONFIG.EMAIL_INPUT_ID)
   const messageInput = document.getElementById(FORM_CONFIG.MESSAGE_INPUT_ID)
   
   return {
-    name: nameInput?.value.trim() || '',
     email: emailInput?.value.trim() || '',
     message: messageInput?.value.trim() || ''
   }
@@ -182,7 +178,7 @@ function getFormValues() {
  * @returns {boolean} True if form is valid
  */
 function validateForm(values) {
-  return values.name.length > 0 && values.email.length > 0
+  return values.email.length > 0
 }
 
 /**
@@ -193,7 +189,6 @@ function validateForm(values) {
  */
 function prepareTemplateParams(values) {
   return {
-    from_name: values.name,
     from_email: values.email,
     message: values.message || FORM_CONFIG.DEFAULT_MESSAGE,
     to_email: FORM_CONFIG.RECIPIENT_EMAIL
