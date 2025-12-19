@@ -209,7 +209,7 @@ export function renderExperience() {
     }
 
     container.innerHTML = `
-      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
+      <h2 class="section-title text-6xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="timeline max-w-4xl mx-auto relative">
         ${items.map(item => {
           if (!item || !item.position || !item.company) return ''
@@ -263,7 +263,7 @@ export function renderProjects() {
     }
 
     container.innerHTML = `
-      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
+      <h2 class="section-title text-6xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         ${items.map(project => {
           if (!project || !project.name || !project.url) return ''
@@ -319,7 +319,7 @@ export function renderAbout() {
     }
 
     container.innerHTML = `
-      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
+      <h2 class="section-title text-6xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="glass-card max-w-5xl mx-auto">
         <!-- Profile Header -->
         <div class="text-center mb-10">
@@ -416,7 +416,7 @@ export function renderSkills() {
     }
 
     container.innerHTML = `
-      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
+      <h2 class="section-title text-6xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-5xl mx-auto">
         ${items.map(skill => {
           if (!skill || !skill.name || !skill.icon) return ''
@@ -468,7 +468,7 @@ export function renderContact() {
     }
 
     container.innerHTML = `
-      <h2 class="section-title text-4xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
+      <h2 class="section-title text-6xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="glass-card">
         <form id="contactForm" class="space-y-6">
           <div>
