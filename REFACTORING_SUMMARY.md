@@ -73,7 +73,7 @@ This document summarizes the refactoring improvements made to the HTML and CSS c
 ## Remaining Considerations
 
 ### HTML Files
-The HTML files (`index.html`, `projects.html`) currently use:
+The HTML file (`index.html`) currently uses:
 - Tailwind utility classes with hard-coded colors (e.g., `text-[#2d3748]`)
 - This is acceptable since Tailwind handles these as arbitrary values
 - Consider creating Tailwind config extensions for these colors if they're used frequently
