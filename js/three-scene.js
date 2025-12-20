@@ -87,9 +87,7 @@ const sceneState = {
   /** Current mouse position (normalized) */
   mouse: { x: 0, y: 0 },
   /** Target camera position (normalized) */
-  target: { x: 0, y: 0 },
-  /** Whether the animation loop is currently paused */
-  isPaused: false
+  target: { x: 0, y: 0 }
 }
 
 /**
@@ -98,9 +96,6 @@ const sceneState = {
  * @returns {HTMLElement} Container element
  */
 function createCanvasContainer() {
-  if (document.getElementById(SCENE_CONFIG.CONTAINER_ID)) {
-    return document.getElementById(SCENE_CONFIG.CONTAINER_ID)
-  }
   const container = document.createElement('div')
   container.id = SCENE_CONFIG.CONTAINER_ID
   container.style.cssText = `
@@ -111,7 +106,6 @@ function createCanvasContainer() {
     height: 100vh;
     z-index: -1;
     pointer-events: none;
-    opacity: 0.6;
   `
   document.body.appendChild(container)
   return container
@@ -125,23 +119,23 @@ function createCanvasContainer() {
  */
 function initializeThreeJS(container) {
   sceneState.scene = new THREE.Scene()
-
+  
   sceneState.camera = new THREE.PerspectiveCamera(
     SCENE_CONFIG.CAMERA_FOV,
     window.innerWidth / window.innerHeight,
     SCENE_CONFIG.CAMERA_NEAR,
     SCENE_CONFIG.CAMERA_FAR
   )
-
-  sceneState.renderer = new THREE.WebGLRenderer({
-    alpha: true,
-    antialias: true
+  
+  sceneState.renderer = new THREE.WebGLRenderer({ 
+    alpha: true, 
+    antialias: true 
   })
-
+  
   sceneState.renderer.setSize(window.innerWidth, window.innerHeight)
   sceneState.renderer.setClearColor(0x000000, 0)
   sceneState.renderer.setPixelRatio(window.devicePixelRatio)
-
+  
   container.appendChild(sceneState.renderer.domElement)
   sceneState.camera.position.z = SCENE_CONFIG.CAMERA_Z_POSITION
 }
@@ -152,10 +146,10 @@ function initializeThreeJS(container) {
  * @returns {Array<THREE.MeshBasicMaterial>} Array of materials
  */
 function createMaterials() {
-  return SHAPE_COLORS.map(color =>
-    new THREE.MeshBasicMaterial({
-      color: color,
-      wireframe: true
+  return SHAPE_COLORS.map(color => 
+    new THREE.MeshBasicMaterial({ 
+      color: color, 
+      wireframe: true 
     })
   )
 }
@@ -170,7 +164,7 @@ function createMaterials() {
 function createRandomShape(geometries, materials) {
   const geometryIndex = Math.floor(Math.random() * geometries.length)
   const materialIndex = Math.floor(Math.random() * materials.length)
-
+  
   const geometry = geometries[geometryIndex]()
   const material = materials[materialIndex]
   const shape = new THREE.Mesh(geometry, material)
@@ -191,9 +185,6 @@ function createRandomShape(geometries, materials) {
   const scale = Math.random() * (SCENE_CONFIG.SCALE_MAX - SCENE_CONFIG.SCALE_MIN) + SCENE_CONFIG.SCALE_MIN
   shape.scale.set(scale, scale, scale)
 
-  // Store original position for stable floating animation (prevents drifting)
-  shape.originalPosition = shape.position.clone()
-
   return shape
 }
 
@@ -204,7 +195,7 @@ function createRandomShape(geometries, materials) {
  */
 function createShapes() {
   const materials = createMaterials()
-
+  
   for (let i = 0; i < SCENE_CONFIG.SHAPE_COUNT; i++) {
     const shape = createRandomShape(SHAPE_GEOMETRIES, materials)
     sceneState.shapes.push(shape)
@@ -235,54 +226,49 @@ function updateCamera() {
 
   // Update camera position with smooth interpolation
   sceneState.camera.position.x += (
-    sceneState.target.x * SCENE_CONFIG.CAMERA_MOVEMENT_MULTIPLIER -
+    sceneState.target.x * SCENE_CONFIG.CAMERA_MOVEMENT_MULTIPLIER - 
     sceneState.camera.position.x
   ) * SCENE_CONFIG.MOUSE_INTERPOLATION
-
+  
   sceneState.camera.position.y += (
-    sceneState.target.y * SCENE_CONFIG.CAMERA_MOVEMENT_MULTIPLIER -
+    sceneState.target.y * SCENE_CONFIG.CAMERA_MOVEMENT_MULTIPLIER - 
     sceneState.camera.position.y
   ) * SCENE_CONFIG.MOUSE_INTERPOLATION
-
+  
   sceneState.camera.lookAt(sceneState.scene.position)
 }
 
 /**
  * Update shape rotations and floating animation
  * 
- * @param {number} time - Current animation time in milliseconds
  * @returns {void}
  */
-function updateShapes(time) {
+function updateShapes() {
+  const currentTime = Date.now()
+  
   sceneState.shapes.forEach((shape) => {
     // Rotate shapes
     shape.rotation.x += shape.rotationSpeed.x
     shape.rotation.y += shape.rotationSpeed.y
     shape.rotation.z += shape.rotationSpeed.z
 
-    // Add stable floating movement relative to original position
-    const floatOffset = Math.sin(
-      time * SCENE_CONFIG.FLOATING_SPEED + shape.originalPosition.x
-    ) * SCENE_CONFIG.FLOATING_AMPLITUDE * 100 // Increased multiplier for visible effect since it's no longer additive
-
-    shape.position.y = shape.originalPosition.y + floatOffset
+    // Add subtle floating movement
+    shape.position.y += Math.sin(
+      currentTime * SCENE_CONFIG.FLOATING_SPEED + shape.position.x
+    ) * SCENE_CONFIG.FLOATING_AMPLITUDE
   })
 }
 
 /**
  * Animation loop
  * 
- * @param {number} time - Current animation time from requestAnimationFrame
  * @returns {void}
  */
-function animate(time) {
+function animate() {
   requestAnimationFrame(animate)
-
-  // Optimization: Skip rendering if the scene is not in view
-  if (sceneState.isPaused) return
-
+  
   updateCamera()
-  updateShapes(time)
+  updateShapes()
   sceneState.renderer.render(sceneState.scene, sceneState.camera)
 }
 
@@ -295,22 +281,6 @@ function handleResize() {
   sceneState.camera.aspect = window.innerWidth / window.innerHeight
   sceneState.camera.updateProjectionMatrix()
   sceneState.renderer.setSize(window.innerWidth, window.innerHeight)
-}
-
-/**
- * Initialize IntersectionObserver to pause animation when not visible
- * 
- * @param {HTMLElement} container - Container element to observe
- * @returns {void}
- */
-function initObserver(container) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      sceneState.isPaused = !entry.isIntersecting
-    })
-  }, { threshold: 0.1 })
-
-  observer.observe(container)
 }
 
 /**
@@ -330,16 +300,13 @@ export function initThreeScene() {
   const container = createCanvasContainer()
   initializeThreeJS(container)
   createShapes()
-
-  // Initialize observer to pause animation when not in view
-  initObserver(container)
-
+  
   // Mouse interaction
   document.addEventListener('mousemove', handleMouseMove)
-
+  
   // Start animation loop
   animate()
-
+  
   // Handle window resize
   window.addEventListener('resize', handleResize)
 }
