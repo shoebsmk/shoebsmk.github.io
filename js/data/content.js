@@ -217,7 +217,7 @@ export const siteData = {
       { name: 'GitHub', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg', url: 'https://github.com' },
       { name: 'Jira', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original-wordmark.svg', url: 'https://www.atlassian.com/software/jira' },
       { name: 'TensorFlow', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg', url: 'https://www.tensorflow.org' },
-      { name: 'QuickBooks', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/quickbooks.svg', url: 'https://quickbooks.intuit.com' },
+      { name: 'QuickBooks Online', icon: 'https://cdn.worldvectorlogo.com/logos/quickbooks-1.svg', url: 'https://quickbooks.intuit.com' },
       { name: 'Power BI', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg', url: 'https://powerbi.microsoft.com' },
       { name: 'SAP', icon: 'https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg', url: 'https://www.sap.com' },
       { name: 'Crew AI', icon: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/crewai-color.svg', url: 'https://www.crewai.com' }
