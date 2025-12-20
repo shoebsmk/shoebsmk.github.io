@@ -113,18 +113,18 @@ function escapeUrl(url) {
   if (typeof url !== 'string') {
     return DEFAULTS.INVALID_URL
   }
-  
+
   // Basic URL validation - only allow safe schemes
   const isSafeUrl = url.startsWith(URL_PATTERNS.HTTP) ||
-                    url.startsWith(URL_PATTERNS.HTTPS) ||
-                    url.startsWith(URL_PATTERNS.MAILTO) ||
-                    url.startsWith(URL_PATTERNS.RELATIVE) ||
-                    url.startsWith(URL_PATTERNS.HASH)
-  
+    url.startsWith(URL_PATTERNS.HTTPS) ||
+    url.startsWith(URL_PATTERNS.MAILTO) ||
+    url.startsWith(URL_PATTERNS.RELATIVE) ||
+    url.startsWith(URL_PATTERNS.HASH)
+
   if (isSafeUrl) {
     return escapeHtml(url)
   }
-  
+
   return DEFAULTS.INVALID_URL
 }
 
@@ -161,12 +161,12 @@ export function renderHero() {
       <p class="text-[28px] text-[#2d3748] mb-8 opacity-75">${escapeHtml(title)}</p>
       <div class="flex flex-wrap gap-4 justify-center relative z-10">
         ${buttons.map(btn => {
-          if (!btn || !btn.href || !btn.text) return ''
-          const attrs = btn.type === 'download' 
-            ? `href="${escapeUrl(btn.href)}" download` 
-            : `href="${escapeUrl(btn.href)}"`
-          return `<a ${attrs} class="btn-glass relative z-10">${escapeHtml(btn.text)}</a>`
-        }).filter(Boolean).join('')}
+      if (!btn || !btn.href || !btn.text) return ''
+      const attrs = btn.type === 'download'
+        ? `href="${escapeUrl(btn.href)}" download`
+        : `href="${escapeUrl(btn.href)}"`
+      return `<a ${attrs} class="btn-glass relative z-10">${escapeHtml(btn.text)}</a>`
+    }).filter(Boolean).join('')}
       </div>
     `
   } catch (error) {
@@ -212,15 +212,15 @@ export function renderExperience() {
       <h2 class="section-title text-6xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="timeline max-w-4xl mx-auto relative">
         ${items.map(item => {
-          if (!item || !item.position || !item.company) return ''
-          return `
+      if (!item || !item.position || !item.company) return ''
+      return `
             <div class="glass-card mb-8 pl-8 border-l-2 border-[#14418A]/20 relative">
               <h3 class="text-xl font-bold mb-2 text-[#2d3748]">${escapeHtml(item.position)}</h3>
               <h4 class="text-lg mb-4 text-[#2d3748] opacity-75">${escapeHtml(item.company)}${item.period ? ' • ' + escapeHtml(item.period) : ''}</h4>
               <p class="text-[#2d3748] opacity-90">${escapeHtml(item.description || '')}</p>
             </div>
           `
-        }).filter(Boolean).join('')}
+    }).filter(Boolean).join('')}
       </div>
     `
   } catch (error) {
@@ -266,8 +266,8 @@ export function renderProjects() {
       <h2 class="section-title text-6xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         ${items.map(project => {
-          if (!project || !project.name || !project.url) return ''
-          return `
+      if (!project || !project.name || !project.url) return ''
+      return `
             <a href="${escapeUrl(project.url)}" target="_blank" rel="noopener noreferrer" class="glass-card overflow-hidden relative group cursor-pointer block p-6 flex flex-col">
               <div class="flex items-start gap-4 mb-4 min-h-[80px]">
                 <div class="flex-shrink-0 w-16 h-16 flex items-center justify-center bg-gradient-to-br from-[#14418A]/90 to-[#14418A]/90 rounded-xl">
@@ -281,7 +281,7 @@ export function renderProjects() {
               <p class="text-[#2d3748] opacity-90 leading-relaxed flex-grow">${escapeHtml(project.description || '')}</p>
             </a>
           `
-        }).filter(Boolean).join('')}
+    }).filter(Boolean).join('')}
       </div>
     `
   } catch (error) {
@@ -342,16 +342,16 @@ export function renderAbout() {
         <!-- Quick Info Cards -->
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mb-10 px-4 md:px-8">
           ${Array.isArray(quickInfo) ? quickInfo.map(info => {
-            if (!info || !info.icon) return ''
-            const value = info.value || ''
-            return `
+      if (!info || !info.icon) return ''
+      const value = info.value || ''
+      return `
               <div class="bg-white/40 p-5 rounded-xl border border-black/5 text-center hover:bg-white/50 transition-all duration-200">
                 <i class="fas ${escapeHtml(info.icon)} text-[#14418A]/90 text-2xl mb-2"></i>
                 <p class="text-sm font-semibold text-[#2d3748] ${value.includes('@') ? 'break-all' : ''}">${escapeHtml(value)}</p>
                 <p class="text-xs text-[#2d3748] opacity-75">${escapeHtml(info.label || '')}</p>
               </div>
             `
-          }).filter(Boolean).join('') : ''}
+    }).filter(Boolean).join('') : ''}
         </div>
         
         <!-- Freelance Services -->
@@ -360,8 +360,8 @@ export function renderAbout() {
             <h4 class="text-2xl font-bold mb-6 text-[#2d3748] text-center">${escapeHtml(freelanceServices.title || '')}</h4>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-8 pb-4">
               ${Array.isArray(freelanceServices.items) ? freelanceServices.items.map(service => {
-                if (!service || !service.icon) return ''
-                return `
+      if (!service || !service.icon) return ''
+      return `
                   <div class="bg-white/30 p-6 rounded-xl border border-black/5 hover:bg-white/40 hover:shadow-lg transition-all duration-200 group">
                     <div class="text-4xl mb-4 text-[#14418A]/90 bg-white/50 w-20 h-20 flex items-center justify-center rounded-full mx-auto group-hover:scale-110 transition-transform duration-200">
                       <i class="fas ${escapeHtml(service.icon)}"></i>
@@ -370,7 +370,7 @@ export function renderAbout() {
                     <p class="text-sm text-[#2d3748] opacity-90 text-center leading-relaxed">${escapeHtml(service.description || '')}</p>
                   </div>
                 `
-              }).filter(Boolean).join('') : ''}
+    }).filter(Boolean).join('') : ''}
             </div>
           </div>
         ` : ''}
@@ -419,13 +419,16 @@ export function renderSkills() {
       <h2 class="section-title text-6xl text-center mb-12 relative inline-block left-1/2 -translate-x-1/2 text-[#2d3748] after:content-[''] after:block after:w-16 after:h-1 after:bg-[#14418A]/90 after:mx-auto after:mt-2.5 after:rounded">${escapeHtml(title || '')}</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-5xl mx-auto">
         ${items.map(skill => {
-          if (!skill || !skill.name || !skill.icon) return ''
-          return `
+      if (!skill || !skill.name || !skill.icon) return ''
+      const badgeHtml = `
             <div class="skill-badge" title="${escapeHtml(skill.name)}">
               <img src="${escapeUrl(skill.icon)}" alt="${escapeHtml(skill.name)}" class="w-14 h-14 mx-auto" loading="lazy">
             </div>
           `
-        }).filter(Boolean).join('')}
+      return skill.url
+        ? `<a href="${escapeUrl(skill.url)}" target="_blank" rel="noopener noreferrer" class="block">${badgeHtml}</a>`
+        : badgeHtml
+    }).filter(Boolean).join('')}
       </div>
     `
   } catch (error) {
@@ -528,13 +531,13 @@ export function renderFooter() {
     container.innerHTML = `
       <div class="social-icons flex justify-center gap-6 mt-4">
         ${Array.isArray(socialLinks) ? socialLinks.map(link => {
-          if (!link || !link.url || !link.name) return ''
-          return `
+      if (!link || !link.url || !link.name) return ''
+      return `
             <a href="${escapeUrl(link.url)}" target="_blank" rel="noopener noreferrer" class="text-6xl text-[#2d3748] hover:text-[#14418A]/90/70 hover:-translate-y-1 transition-all duration-150" aria-label="${escapeHtml(link.name)}">
               <i class="${escapeHtml(link.icon || '')}"></i>
             </a>
           `
-        }).filter(Boolean).join('') : ''}
+    }).filter(Boolean).join('') : ''}
       </div>
       <p class="mt-4 text-[#2d3748] opacity-75">${escapeHtml(copyright || '')}</p>
     `
@@ -566,7 +569,7 @@ export function renderAll() {
     renderSkills()
     renderContact()
     renderFooter()
-    
+
     // Update page title from metadata
     if (siteData.meta?.title) {
       document.title = siteData.meta.title
