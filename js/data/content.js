@@ -181,13 +181,13 @@ export const siteData = {
       { name: 'Android', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg' },
       { name: 'Xcode', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/xcode/xcode-original.svg' },
       { name: 'Unity', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg' },
-      
+
       // Frontend/Web
       { name: 'React', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg' },
       { name: 'JavaScript', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg' },
       { name: 'TypeScript', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg' },
       { name: 'Figma', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg' },
-      
+
       // Backend
       { name: 'Python', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg' },
       { name: 'Java', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg' },
@@ -198,7 +198,7 @@ export const siteData = {
       { name: '.NET', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/dotnetcore/dotnetcore-original.svg' },
       { name: 'C#', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg' },
       { name: 'C++', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg' },
-      
+
       // Cloud/DevOps
       { name: 'AWS', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg' },
       { name: 'GCP', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg' },
@@ -207,8 +207,8 @@ export const siteData = {
       { name: 'Docker', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg' },
       { name: 'CI/CD', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/githubactions/githubactions-original.svg' },
       { name: 'Linux', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg' },
-      { name: 'n8n', icon: 'https://avatars.githubusercontent.com/u/42439588?s=200&v=4' },
-      
+      { name: 'n8n', icon: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/n8n-color.svg' },
+
       // Databases/Tools
       { name: 'MongoDB', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg' },
       { name: 'Firebase', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg' },
@@ -220,7 +220,7 @@ export const siteData = {
       { name: 'QuickBooks', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/quickbooks.svg' },
       { name: 'Power BI', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg' },
       { name: 'SAP', icon: 'https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg' },
-      { name: 'Crew AI', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/langchain.svg' }
+      { name: 'Crew AI', icon: 'https://unpkg.com/@lobehub/icons-static-svg@latest/icons/crewai-color.svg' }
     ]
   },
 
@@ -255,15 +255,15 @@ export const siteData = {
   // Footer Section
   footer: {
     socialLinks: [
-      { 
-        name: 'LinkedIn', 
-        url: 'https://www.linkedin.com/in/shoebsmk/', 
-        icon: 'fab fa-linkedin' 
+      {
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/shoebsmk/',
+        icon: 'fab fa-linkedin'
       },
-      { 
-        name: 'GitHub', 
-        url: 'https://github.com/shoebsmk/', 
-        icon: 'fab fa-github' 
+      {
+        name: 'GitHub',
+        url: 'https://github.com/shoebsmk/',
+        icon: 'fab fa-github'
       }
       // Uncomment to add more social links:
       // { name: 'Instagram', url: 'https://www.instagram.com/shoeb_mk_', icon: 'fab fa-instagram' },
